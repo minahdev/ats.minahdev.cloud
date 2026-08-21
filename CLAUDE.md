@@ -34,7 +34,7 @@ Jekyll + minima 테마 정적 사이트. GitHub Pages가 빌드·서빙한다.
 ## 환경
 
 - 작업 셸: WSL2 Ubuntu (`ddu@DESKTOP-M1E9ACP`), systemd 활성화됨
-- 리포 경로: `/home/ddu/projects/demo-minahdev/demo.minahdev.cloud`
+- 리포 경로: `/home/ddu/projects/ats.minahdev.cloud`
 - Ruby 3.2.3 (apt `ruby-full`), bundler 4.0.19 (`gem install --user-install`)
   - user gem 경로가 `~/.bashrc`의 PATH에 등록돼 있다
 - Jekyll 3.10.0 — `github-pages` 232 gem 경유. GitHub Pages 빌더와 같은 버전이다
@@ -56,7 +56,7 @@ MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /home/ddu/script.sh
   넣지 말 것.** 인자 전달 과정에서 깨져 syntax error가 나거나 출력이 사라진다.
   조금이라도 복잡하면 **스크립트 파일로 써서 실행**할 것 (Write 도구 → `wsl bash 파일`)
 - 파일 읽기/쓰기는 UNC 경로로 Read/Write 도구를 쓰는 게 안전하다:
-  `\\wsl.localhost\Ubuntu\home\ddu\projects\demo-minahdev\demo.minahdev.cloud\...`
+  `\\wsl.localhost\Ubuntu\home\ddu\projects\ats.minahdev.cloud\...`
 
 ---
 
@@ -74,10 +74,6 @@ _posts/YYYY-MM-DD-slug.md          글 — 초기 샘플 1개뿐, 보고서 본�
 
 이 사이트는 블로그가 아니라 **개발 보고서**다. 각 장은 `_posts/`가 아니라
 루트의 `.md` 페이지로 만들고 `permalink`를 지정한다.
-
-**로컬 디렉토리 이름은 리포 이름과 다르다.** 리포는 `ats.minahdev.cloud`로
-이름을 바꿨지만 로컬 폴더는 `~/projects/demo-minahdev/demo.minahdev.cloud`
-그대로다. 헷갈리지 말 것 — 경로는 `demo`, 리포와 사이트 주소는 `ats`다.
 
 `_site/`, `vendor/`, `Gemfile.lock`은 커밋하지 않는다. legacy Pages 빌드는 GitHub이
 고정한 gem 세트를 쓰므로 로컬 lock 파일은 배포에 영향이 없다.
@@ -187,7 +183,7 @@ curl -sS -o /dev/null -w '%{http_code}\n' https://minahdev.github.io/ats.minahde
 ## 로컬 미리보기
 
 ```bash
-cd ~/projects/demo-minahdev/demo.minahdev.cloud
+cd ~/projects/ats.minahdev.cloud
 bundle exec jekyll serve --host 0.0.0.0 --port 4000 --baseurl ""
 ```
 
