@@ -83,7 +83,7 @@ title: 표지
     <p class="cover__value">음머 · suvisdev · friendship · 또요니 · 밍뚜 <span class="cover__sub">(5명)</span></p>
 
     <p class="cover__label">깃허브 주소</p>
-    <p class="cover__value"><a href="https://github.com/minahdev/demo.minahdev.cloud">https://github.com/minahdev/demo.minahdev.cloud</a></p>
+    <p class="cover__value"><a href="https://github.com/minahdev/ats.minahdev.cloud">https://github.com/minahdev/ats.minahdev.cloud</a></p>
 
     <p class="cover__label">데모 사이트</p>
     <p class="cover__value"><a href="https://ats.minahdev.cloud">https://ats.minahdev.cloud</a></p>

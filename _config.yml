@@ -2,10 +2,10 @@ title: minahdev
 description: >-
   AI 기반 채용 프로세스 자동화 및 지원자 통합 관리 플랫폼 개발 보고서.
 
-# 지금은 프로젝트 페이지(minahdev.github.io/demo.minahdev.cloud/)로 서빙되므로
-# baseurl에 경로가 필요하다. 커스텀 도메인(ats.minahdev.cloud 등)을 붙이면
-# baseurl은 ""로, url은 그 도메인으로 바꿔야 한다.
-baseurl: "/demo.minahdev.cloud"
+# 지금은 프로젝트 페이지(minahdev.github.io/ats.minahdev.cloud/)로 서빙되므로
+# baseurl에 리포 이름 경로가 필요하다. 커스텀 도메인 ats.minahdev.cloud를 붙이면
+# baseurl은 ""로, url은 "https://ats.minahdev.cloud"로 바꿔야 한다.
+baseurl: "/ats.minahdev.cloud"
 url: "https://minahdev.github.io"
 
 theme: minima

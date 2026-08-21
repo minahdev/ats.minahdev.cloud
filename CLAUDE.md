@@ -1,9 +1,9 @@
-# demo.minahdev.cloud
+# ats.minahdev.cloud
 
 Jekyll + minima 테마 정적 사이트. GitHub Pages가 빌드·서빙한다.
 
-- 리포: `minahdev/demo.minahdev.cloud` (public)
-- **배포된 사이트**: https://minahdev.github.io/demo.minahdev.cloud/ (항상 접속 가능)
+- 리포: `minahdev/ats.minahdev.cloud` (public)
+- **배포된 사이트**: https://minahdev.github.io/ats.minahdev.cloud/ (항상 접속 가능)
 - 배포 방식: GitHub Pages **legacy 빌드** (Deploy from a branch → `main`, 루트 `/`)
 - `main`에 push하면 자동으로 다시 빌드된다. CI 워크플로 파일은 없다.
 
@@ -63,13 +63,21 @@ MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /home/ddu/script.sh
 ## 파일 구조
 
 ```
-_config.yml                        사이트 설정
+_config.yml                        사이트 설정 (header_pages로 상단 메뉴 지정)
 Gemfile                            github-pages gem
-index.md                           홈 — layout: home (글 목록 자동 생성)
-about.md                           /about/ 페이지
-_posts/YYYY-MM-DD-slug.md          글
-.gitignore                         _site/, vendor/, Gemfile.lock 등 제외
+index.md                           표지 — 사업명·기간·팀·링크
+toc.md                             /toc/ 목차 (11장)
+about.md                           /about/ — 초기 샘플. 메뉴에는 안 나옴
+_posts/YYYY-MM-DD-slug.md          글 — 초기 샘플 1개뿐, 보고서 본문은 페이지로 쓴다
+.gitignore                         _site/, vendor/, *.key 등 제외
 ```
+
+이 사이트는 블로그가 아니라 **개발 보고서**다. 각 장은 `_posts/`가 아니라
+루트의 `.md` 페이지로 만들고 `permalink`를 지정한다.
+
+**로컬 디렉토리 이름은 리포 이름과 다르다.** 리포는 `ats.minahdev.cloud`로
+이름을 바꿨지만 로컬 폴더는 `~/projects/demo-minahdev/demo.minahdev.cloud`
+그대로다. 헷갈리지 말 것 — 경로는 `demo`, 리포와 사이트 주소는 `ats`다.
 
 `_site/`, `vendor/`, `Gemfile.lock`은 커밋하지 않는다. legacy Pages 빌드는 GitHub이
 고정한 gem 세트를 쓰므로 로컬 lock 파일은 배포에 영향이 없다.
@@ -98,7 +106,7 @@ categories: jekyll
 - `title`에 콜론(`:`)이 들어가면 반드시 따옴표로 감쌀 것 (YAML 파싱 에러)
 - 타임존은 `+0900`으로 통일
 - URL은 `categories`에 따라 결정된다:
-  `categories: jekyll` → `/demo.minahdev.cloud/jekyll/2026/08/21/slug.html`
+  `categories: jekyll` → `/ats.minahdev.cloud/jekyll/2026/08/21/slug.html`
   발행된 글의 카테고리를 바꾸면 URL이 깨지므로 함부로 바꾸지 말 것
 
 ## 페이지 만드는 규칙
@@ -137,20 +145,20 @@ permalink: /경로/
 `baseurl`과 도메인은 한 몸이다. 지금은 프로젝트 페이지로 서빙되므로:
 
 ```yaml
-baseurl: "/demo.minahdev.cloud"
+baseurl: "/ats.minahdev.cloud"
 url: "https://minahdev.github.io"
 ```
 
-**커스텀 도메인 `demo.minahdev.cloud`를 붙이게 되면 반드시 함께 바꿀 것:**
+**커스텀 도메인 `ats.minahdev.cloud`를 붙이게 되면 반드시 함께 바꿀 것:**
 
 ```yaml
 baseurl: ""
-url: "https://demo.minahdev.cloud"
+url: "https://ats.minahdev.cloud"
 ```
 
 둘 중 하나만 바꾸면 CSS와 모든 내부 링크가 깨진다.
 
-- 현재 `demo.minahdev.cloud`는 **DNS 레코드가 없다.** DNS가 GitHub Pages를 가리키기
+- 현재 `ats.minahdev.cloud`는 **DNS 레코드가 없다.** DNS가 GitHub Pages를 가리키기
   전에 `CNAME` 파일을 추가하면 사이트가 접속 불가가 되므로, DNS 확인 후에 추가할 것
 - `_config.yml`을 고쳐도 `jekyll serve`는 자동 반영하지 않는다. 서버를 재시작할 것
 - **플러그인은 GitHub Pages 화이트리스트에 있는 것만 동작한다.** legacy 빌드는
@@ -166,8 +174,8 @@ url: "https://demo.minahdev.cloud"
 3. **배포 결과를 실제로 확인한다** — push 성공은 사이트가 떴다는 뜻이 아니다
 
 ```bash
-gh api repos/minahdev/demo.minahdev.cloud/pages/builds/latest --jq '.status, .error.message'
-curl -sS -o /dev/null -w '%{http_code}\n' https://minahdev.github.io/demo.minahdev.cloud/
+gh api repos/minahdev/ats.minahdev.cloud/pages/builds/latest --jq '.status, .error.message'
+curl -sS -o /dev/null -w '%{http_code}\n' https://minahdev.github.io/ats.minahdev.cloud/
 ```
 
 `status`가 `built`이고 HTTP 200이어야 완료다. `errored`면 `.error.message`에 원인이 있다.
@@ -251,7 +259,7 @@ tailscale funnel --https=443 off    # 끄기
 
 **미완 / 결정 대기**
 
-- **커스텀 도메인 `demo.minahdev.cloud`** — DNS 미설정. DNS를 걸면
+- **커스텀 도메인 `ats.minahdev.cloud`** — DNS 미설정. DNS를 걸면
   `CNAME` 파일 추가 + `baseurl`/`url` 변경을 함께 해야 한다
 - **콘텐츠** — 예시 글 1개뿐. 실제 글은 아직 없다
 - **Funnel** — 현재 켜져 있음. 미리보기가 끝났으면 끌 것
