@@ -60,6 +60,21 @@ permalink: /schedule/
   letter-spacing: .03em;
 }
 .sprint__id { font-weight: 700; color: #111827; font-size: .92rem; }
+/* 상세 페이지가 있는 스프린트만 링크가 된다 */
+.sprint__link { display: inline-flex; align-items: baseline; gap: .3rem; text-decoration: none; }
+.sprint__link .sprint__id { color: #2a7ae2; }
+.sprint__link:hover .sprint__id { text-decoration: underline; }
+.sprint__arrow { color: #2a7ae2; font-size: .8rem; }
+.sprint__detail {
+  display: inline-block;
+  margin-top: .3rem;
+  padding: .04rem .35rem;
+  border-radius: 3px;
+  background: #eff6ff;
+  color: #2a7ae2;
+  font-size: .68rem;
+  font-weight: 600;
+}
 .sprint__goal { font-size: .8rem; color: #6b7280; display: block; margin-top: .15rem; word-break: keep-all; }
 .sprint__date { font-size: .85rem; color: #374151; font-variant-numeric: tabular-nums; }
 .sprint__days { display: block; font-size: .75rem; color: #9ca3af; margin-top: .15rem; }
@@ -168,8 +183,11 @@ permalink: /schedule/
     </div>
 
     <div class="sprint__row">
-      <span><span class="sprint__id">Sprint 1</span>
-        <span class="sprint__goal">기반 구축</span></span>
+      <span><a class="sprint__link" href="{{ '/sprint-1/' | relative_url }}">
+          <span class="sprint__id">Sprint 1</span>
+          <span class="sprint__arrow">&rarr;</span></a>
+        <span class="sprint__goal">기반 구축</span>
+        <span class="sprint__detail">일자별 진행</span></span>
       <span><span class="sprint__date">08.20 ~ 09.02</span>
         <span class="sprint__days">14일 · 1–2주차</span></span>
       <span class="sprint__out">
