@@ -3,4 +3,11 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 vendor/
+.bundle/
 Gemfile.lock
+
+# TLS 인증서·개인키 — 리포에 절대 커밋 금지.
+# `tailscale cert`를 리포 디렉토리에서 실행하면 여기에 파일이 떨어진다.
+*.crt
+*.key
+*.pem
