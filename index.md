@@ -108,7 +108,7 @@ title: 표지
       <span class="cover__sub">총 69일 / 약 10주</span></p>
 
     <p class="cover__label">개발팀 : seuk</p>
-    <p class="cover__value">음머 · suvisdev · friendship · 또요니 · 밍뚜
+    <p class="cover__value">김민아 · 박소연 · 이재우 · 이우정 · 진수택
       <span class="cover__sub">5명</span></p>
 
     <p class="cover__label">문서 작성일</p>
