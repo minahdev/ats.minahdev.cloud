@@ -1,8 +1,11 @@
 title: minahdev
 description: >-
   Jekyll 데모 사이트.
-baseurl: ""
-url: "https://demo.minahdev.cloud"
+# 지금은 프로젝트 페이지(minahdev.github.io/demo.minahdev.cloud/)로 서빙되므로
+# baseurl에 경로가 필요하다. 커스텀 도메인 demo.minahdev.cloud를 붙이면
+# baseurl은 ""로, url은 "https://demo.minahdev.cloud"로 바꿔야 한다.
+baseurl: "/demo.minahdev.cloud"
+url: "https://minahdev.github.io"
 
 theme: minima
 plugins:
