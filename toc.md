@@ -11,19 +11,40 @@ permalink: /toc/
 .toc__head p { margin: 0; color: #6b7280; font-size: .9rem; word-break: keep-all; }
 .toc__ch { margin-bottom: 2.25rem; }
 .toc__ch > h2 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  color: #2a7ae2;
   margin: 0 0 .75rem;
   padding-bottom: .5rem;
   border-bottom: 1px solid #e5e7eb;
   display: flex;
-  gap: .75rem;
+  gap: .5rem;
   align-items: baseline;
   word-break: keep-all;
 }
-.toc__num { color: #9ca3af; font-variant-numeric: tabular-nums; font-weight: 700; }
-.toc__ch ul { list-style: none; margin: 0; padding: 0 0 0 2.1rem; }
-.toc__ch li { padding: .3rem 0; color: #374151; font-size: .95rem; word-break: keep-all; }
-.toc__ch li::before { content: "—"; color: #d1d5db; margin-right: .6rem; }
+.toc__num { font-variant-numeric: tabular-nums; font-weight: 700; }
+/* 항목 번호는 CSS 카운터로 매긴다. 장마다 1)부터 다시 시작한다. */
+.toc__ch ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1.1rem;
+  counter-reset: toc-item;
+}
+.toc__ch li {
+  counter-increment: toc-item;
+  display: flex;
+  gap: .8rem;
+  padding: .32rem 0;
+  color: #374151;
+  font-size: .95rem;
+  word-break: keep-all;
+}
+.toc__ch li::before {
+  content: counter(toc-item) ")";
+  flex: 0 0 1.4rem;
+  text-align: right;
+  color: #9ca3af;
+  font-variant-numeric: tabular-nums;
+}
 .toc__back { display: inline-block; margin-top: 1rem; font-size: .9rem; }
 </style>
 
@@ -35,7 +56,7 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">01</span> 사업 개요</h2>
+  <h2><span class="toc__num">1.</span> 사업 개요</h2>
   <ul>
     <li>추진 배경 및 필요성</li>
     <li>개발 목적</li>
@@ -45,7 +66,7 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">02</span> 팀 구성 및 역할</h2>
+  <h2><span class="toc__num">2.</span> 팀 구성 및 역할</h2>
   <ul>
     <li>개발 인원 소개</li>
     <li>역할 분담</li>
@@ -54,7 +75,7 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">03</span> 요구사항 분석</h2>
+  <h2><span class="toc__num">3.</span> 요구사항 분석</h2>
   <ul>
     <li>기존 채용 프로세스의 문제점</li>
     <li>기능 요구사항</li>
@@ -64,7 +85,7 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">04</span> 시스템 설계</h2>
+  <h2><span class="toc__num">4.</span> 시스템 설계</h2>
   <ul>
     <li>시스템 아키텍처</li>
     <li>데이터베이스 설계 (ERD)</li>
@@ -74,7 +95,7 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">05</span> 기술 스택 및 개발 환경</h2>
+  <h2><span class="toc__num">5.</span> 기술 스택 및 개발 환경</h2>
   <ul>
     <li>기술 스택 선정 및 근거</li>
     <li>개발 환경 구성</li>
@@ -83,7 +104,7 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">06</span> 주요 기능 개발</h2>
+  <h2><span class="toc__num">6.</span> 주요 기능 개발</h2>
   <ul>
     <li>채용 공고 등록 및 관리</li>
     <li>지원자 통합 관리</li>
@@ -95,7 +116,7 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">07</span> AI 모델 적용</h2>
+  <h2><span class="toc__num">7.</span> AI 모델 적용</h2>
   <ul>
     <li>모델 선정 및 비교</li>
     <li>프롬프트 및 파이프라인 설계</li>
@@ -105,7 +126,7 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">08</span> 테스트</h2>
+  <h2><span class="toc__num">8.</span> 테스트</h2>
   <ul>
     <li>테스트 계획</li>
     <li>단위 및 통합 테스트</li>
@@ -115,7 +136,7 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">09</span> 배포 및 운영</h2>
+  <h2><span class="toc__num">9.</span> 배포 및 운영</h2>
   <ul>
     <li>배포 구성</li>
     <li>CI/CD 파이프라인</li>
@@ -124,7 +145,7 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">10</span> 개발 일정</h2>
+  <h2><span class="toc__num">10.</span> 개발 일정</h2>
   <ul>
     <li>전체 일정 (2026.08.20 – 2026.10.27)</li>
     <li>주차별 진행 계획</li>
@@ -133,7 +154,7 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">11</span> 결론 및 향후 과제</h2>
+  <h2><span class="toc__num">11.</span> 결론 및 향후 과제</h2>
   <ul>
     <li>개발 성과</li>
     <li>한계점</li>
@@ -141,6 +162,15 @@ permalink: /toc/
   </ul>
 </div>
 
-<a class="toc__back" href="{{ '/' | relative_url }}">&larr; 표지로</a>
+<div class="toc__ch">
+  <h2><span class="toc__num">12.</span> 부록</h2>
+  <ul>
+    <li>용어 정의</li>
+    <li>관련 서식</li>
+    <li>참고 자료</li>
+  </ul>
+</div>
+
+<a class="toc__back" href="{{ '/' | relative_url }}">&larr; 표지</a>
 
 </div>
