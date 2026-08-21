@@ -6,6 +6,12 @@ vendor/
 .bundle/
 Gemfile.lock
 
+# 환경변수 — 실제 접속 정보가 들어간다. 리포가 public 이므로 커밋 금지.
+# .env.example(키 목록만 담은 예시)은 예외로 추적한다.
+.env
+.env.*
+!.env.example
+
 # TLS 인증서·개인키 — 리포에 절대 커밋 금지.
 # `tailscale cert`를 리포 디렉토리에서 실행하면 여기에 파일이 떨어진다.
 *.crt
