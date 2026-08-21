@@ -21,6 +21,7 @@ plugins:
 # index.md는 넣지 않는다 — 좌측 사이트 제목이 이미 표지로 가는 링크다.
 header_pages:
   - toc.md
+  - schedule.md
   - log.md
   - todo.md
 

@@ -145,11 +145,13 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">10.</span> 개발 일정</h2>
+  <h2><span class="toc__num">10.</span>
+    <a href="{{ '/schedule/' | relative_url }}">개발 일정 및 추진 체계</a></h2>
   <ul>
-    <li>전체 일정 (2026.08.20 – 2026.10.27)</li>
-    <li>주차별 진행 계획</li>
-    <li>마일스톤</li>
+    <li>스프린트 계획 (2주 &times; 5회, 2026.08.20 – 2026.10.27)</li>
+    <li>칸반 보드</li>
+    <li>조직 구성 및 역할 분담</li>
+    <li>스크럼 운영</li>
   </ul>
 </div>
 
