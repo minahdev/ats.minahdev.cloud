@@ -1,0 +1,14 @@
+title: minahdev
+description: >-
+  Jekyll 데모 사이트.
+baseurl: ""
+url: "https://demo.minahdev.cloud"
+
+theme: minima
+plugins:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
