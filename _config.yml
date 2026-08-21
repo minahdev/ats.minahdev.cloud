@@ -1,6 +1,11 @@
-title: minahdev
+# 상단 헤더와 푸터에 표시되는 이름. 팀명(seuk)이 아니라 프로젝트명을 쓴다.
+title: AI 채용 자동화 플랫폼
 description: >-
-  AI 기반 채용 프로세스 자동화 및 지원자 통합 관리 플랫폼 개발 보고서.
+  AI 기반 채용 프로세스 자동화 및 지원자 통합 관리 플랫폼 구축을 위한 개발 보고서.
+  개발 기간 2026년 8월 20일 ~ 10월 27일.
+
+# 푸터의 깃허브 링크. email을 추가하면 푸터에 메일 주소가 공개되므로 넣지 않았다.
+github_username: minahdev
 
 # 지금은 프로젝트 페이지(minahdev.github.io/ats.minahdev.cloud/)로 서빙되므로
 # baseurl에 리포 이름 경로가 필요하다. 커스텀 도메인 ats.minahdev.cloud를 붙이면
@@ -13,10 +18,11 @@ plugins:
   - jekyll-feed
 
 # 상단 네비게이션에 노출할 페이지와 그 순서.
-# 지정하지 않으면 모든 페이지가 알파벳순으로 나열된다.
+# index.md는 넣지 않는다 — 좌측 사이트 제목이 이미 표지로 가는 링크다.
 header_pages:
-  - index.md
   - toc.md
+  - log.md
+  - todo.md
 
 exclude:
   - Gemfile
