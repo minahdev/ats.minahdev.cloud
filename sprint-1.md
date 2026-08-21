@@ -102,7 +102,7 @@ permalink: /sprint-1/
   <div class="stat"><span class="stat__k">경과</span>
     <span class="stat__v">2<small>/ 14일</small></span></div>
   <div class="stat"><span class="stat__k">완료</span>
-    <span class="stat__v">12<small>건</small></span></div>
+    <span class="stat__v">14<small>건</small></span></div>
   <div class="stat"><span class="stat__k">진행 중</span>
     <span class="stat__v">4<small>건</small></span></div>
 </div>
@@ -164,7 +164,20 @@ permalink: /sprint-1/
     </tr>
 
     <tr class="d-first">
-      <td class="daily__date" rowspan="6"><b>08. 21. (금)</b><span>2일차</span></td>
+      <td class="daily__date" rowspan="8"><b>08. 21. (금)</b><span>2일차</span></td>
+      <td><span class="who who-e">수택 E</span></td>
+      <td>AWS 루트 계정 로그인 후 IAM 사용자 생성, IAM 계정으로 재로그인 —
+          이후 작업은 루트 계정을 사용하지 않는다</td>
+      <td class="daily__out">IAM 사용자 · 접근 권한</td>
+      <td><span class="st st-done">완료</span></td>
+    </tr>
+    <tr>
+      <td><span class="who who-e">수택 E</span></td>
+      <td>RDS 인스턴스 생성 및 접속 엔드포인트 확보 — 애플리케이션 DB 연결의 선행 작업</td>
+      <td class="daily__out">RDS 접속 URL</td>
+      <td><span class="st st-done">완료</span></td>
+    </tr>
+    <tr>
       <td><span class="who who-all">전원</span></td>
       <td>보고서 표지 레이아웃 확정 — 라벨 / 값 2단 그리드, 팀원 명단 반영</td>
       <td class="daily__out">표지 페이지</td>

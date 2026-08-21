@@ -58,6 +58,8 @@ permalink: /log/
   </div>
 
   <ul>
+    <li>AWS 루트 계정에서 IAM 사용자 생성 후 IAM 계정으로 재로그인<span class="log__tag">인프라</span></li>
+    <li>RDS 인스턴스 생성 및 접속 엔드포인트 확보<span class="log__tag">인프라</span></li>
     <li>Jekyll + minima 기반 보고서 사이트 스캐폴드 구성<span class="log__tag">인프라</span></li>
     <li>GitHub Pages 배포 파이프라인 연결 — <code>main</code> push 시 자동 빌드<span class="log__tag">인프라</span></li>
     <li>프로젝트 페이지 경로에 맞춰 <code>baseurl</code> 설정<span class="log__tag">인프라</span></li>
