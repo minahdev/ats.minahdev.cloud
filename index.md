@@ -86,7 +86,7 @@ title: 표지
     <p class="cover__value"><a href="https://github.com/minahdev/demo.minahdev.cloud">https://github.com/minahdev/demo.minahdev.cloud</a></p>
 
     <p class="cover__label">데모 사이트</p>
-    <p class="cover__value"><a href="https://minahdev.github.io/demo.minahdev.cloud/">https://minahdev.github.io/demo.minahdev.cloud/</a></p>
+    <p class="cover__value"><a href="https://ats.minahdev.cloud">https://ats.minahdev.cloud</a></p>
 
   </div>
 
