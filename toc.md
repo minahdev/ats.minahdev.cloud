@@ -66,11 +66,17 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">2.</span> 팀 구성 및 역할</h2>
+  <h2><span class="toc__num">2.</span>
+    <a href="{{ '/team/' | relative_url }}">팀 구성 및 역할</a></h2>
   <ul>
-    <li>개발 인원 소개</li>
-    <li>역할 분담</li>
-    <li>협업 방식 및 일정 관리</li>
+    <li>개발 인원 소개 &mdash; 5인 1도메인</li>
+    <li>역할 분담 &middot; 의존 구조</li>
+    <li>협업 방식 (도메인 오너제)</li>
+    <li><a href="{{ '/role-infra/' | relative_url }}">인프라 &middot; 총괄 &mdash; 이재우</a></li>
+    <li><a href="{{ '/role-backend/' | relative_url }}">백엔드 &mdash; 이우정</a></li>
+    <li><a href="{{ '/role-frontend/' | relative_url }}">프론트엔드 &mdash; 박소연</a></li>
+    <li><a href="{{ '/role-agent/' | relative_url }}">에이전트 &mdash; 진수택</a></li>
+    <li><a href="{{ '/role-app/' | relative_url }}">앱 (모바일) &mdash; 김민아</a></li>
   </ul>
 </div>
 
@@ -148,10 +154,11 @@ permalink: /toc/
   <h2><span class="toc__num">10.</span>
     <a href="{{ '/schedule/' | relative_url }}">개발 일정 및 추진 체계</a></h2>
   <ul>
-    <li>스프린트 계획 (2주 &times; 5회, 2026.08.20 – 2026.10.27)</li>
+    <li>진행 체계 &mdash; 게이트 2개 (초기 버전 09.04 / 1차 완성 09.30)</li>
+    <li>주차별 진행 계획 (W1 &ndash; W5 + 통합 버퍼)</li>
     <li>칸반 보드</li>
     <li>조직 구성 및 역할 분담</li>
-    <li>스크럼 운영</li>
+    <li>운영 리듬</li>
   </ul>
 </div>
 

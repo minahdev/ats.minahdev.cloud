@@ -51,14 +51,15 @@ permalink: /todo/
 
 <div class="todo__head">
   <h1>미결 항목</h1>
-  <p>결정이 필요하거나 아직 착수하지 않은 항목 &middot; 최종 갱신 2026. 08. 21.</p>
+  <p>결정이 필요하거나 아직 착수하지 않은 항목 &middot; 최종 갱신 2026. 08. 28.</p>
 </div>
 
 <div class="todo__item">
-  <p class="todo__title">보고서 본문 11장 작성<span class="todo__status is-planned">진행 예정</span></p>
+  <p class="todo__title">보고서 본문 잔여 장 작성<span class="todo__status is-planned">진행 예정</span></p>
   <p class="todo__desc">
-    현재 표지와 목차만 작성된 상태다. 각 장은 <code>_posts/</code>가 아니라 루트의
-    <code>.md</code> 페이지로 만들고 <code>permalink</code>를 지정한다.
+    12장 중 <b>2장(팀 구성 및 역할)</b>과 <b>10장(개발 일정 및 추진 체계)</b>은 작성됐다.
+    나머지 10개 장이 남았다. 각 장은 <code>_posts/</code>가 아니라 루트의 <code>.md</code>
+    페이지로 만들고 <code>permalink</code>를 지정한다.
   </p>
 </div>
 
@@ -82,10 +83,20 @@ permalink: /todo/
 </div>
 
 <div class="todo__item">
-  <p class="todo__title">개발 일정 상세화<span class="todo__status is-open">미착수</span></p>
+  <p class="todo__title">10. 01. 이후 2차 구간 계획<span class="todo__status is-open">미착수</span></p>
   <p class="todo__desc">
-    전체 기간(2026. 08. 20. ~ 10. 27., 총 69일)은 확정됐으나 주차별 진행 계획과
-    마일스톤은 아직 정리되지 않았다. 목차 10장에 해당한다.
+    주차별 계획은 <b>1차 완성(09. 30.)까지만</b> 수립돼 있다. 전체 개발 기간은 10. 27.까지이므로
+    10. 01. ~ 10. 27. 구간의 목표와 산출물이 비어 있다. 1차 완성 판정 결과를 보고 수립한다.
+  </p>
+</div>
+
+<div class="todo__item">
+  <p class="todo__title">개발 로그 공백 (08. 22. ~ 28.)<span class="todo__status is-open">미착수</span></p>
+  <p class="todo__desc">
+    <code>/log/</code>의 마지막 기록이 08. 21.이다. 그 사이 도메인 오너제 전환, ERD 확정,
+    코어 API, 앱 스택 확정과 뼈대 등 실제 진행이 있었으므로 주차 단위로 메워야 한다.
+    스프린트 체계를 접으면서 <code>/sprint-1/</code> 일자별 페이지를 삭제했으므로,
+    <b>08. 20. ~ 21.의 기록도 이 로그로 옮겨야 한다.</b>
   </p>
 </div>
 
