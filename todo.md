@@ -66,6 +66,7 @@ permalink: /todo/
 <div class="todo__item">
   <p class="todo__title">커스텀 도메인 <code>ats.minahdev.cloud</code> 연결<span class="todo__status is-waiting">결정 대기</span></p>
   <p class="todo__desc">
+    <b>이 보고서 사이트의 도메인이다</b> — 데모 사이트(<code>arda.seuk.cloud</code>)와는 다르다.
     DNS 레코드가 아직 없다. DNS가 GitHub Pages를 가리키기 전에 <code>CNAME</code> 파일을
     추가하면 사이트가 접속 불가가 되므로, DNS 확인 후에 추가해야 한다.
     이때 <code>baseurl</code>을 <code>""</code>로, <code>url</code>을
