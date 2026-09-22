@@ -13,7 +13,7 @@ permalink: /role-backend/
      백엔드</p>
   <h1>백엔드 &middot; 담당 이우정</h1>
   <p>화면 &middot; 앱 &middot; 에이전트가 딛고 서는 모든 API와 데이터
-     &middot; 최종 갱신 2026. 08. 28.</p>
+     &middot; 최종 갱신 2026. 09. 22.</p>
 </div>
 
 <div class="role__stat">

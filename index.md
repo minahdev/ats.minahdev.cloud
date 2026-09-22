@@ -103,22 +103,26 @@ title: 표지
 
   <div class="cover__meta">
 
+    <p class="cover__label">시스템명</p>
+    <p class="cover__value">Arda <span class="cover__sub">Eval-ATS</span></p>
+
     <p class="cover__label">개발 기간</p>
     <p class="cover__value">2026년 8월 20일 (목) ~ 2026년 10월 27일 (화)
       <span class="cover__sub">총 69일 / 약 10주</span></p>
 
     <p class="cover__label">개발팀 : seuk</p>
-    <p class="cover__value">김민아 · 박소연 · 이재우 · 이우정 · 진수택
-      <span class="cover__sub">5명</span></p>
+    <p class="cover__value">김민아 · 박소연 · 이우정 · 진수택
+      <span class="cover__sub">4명 · 5도메인 (김민아 앱 &middot; 프론트엔드 겸임)</span></p>
 
     <p class="cover__label">문서 작성일</p>
-    <p class="cover__value">2026년 8월 28일</p>
+    <p class="cover__value">2026년 9월 22일</p>
 
     <p class="cover__label">깃허브 주소</p>
-    <p class="cover__value"><a href="https://github.com/minahdev/ats.minahdev.cloud">https://github.com/minahdev/ats.minahdev.cloud</a></p>
+    <p class="cover__value"><a href="https://github.com/Seuk-Team/Arda">https://github.com/Seuk-Team/Arda</a></p>
 
     <p class="cover__label">데모 사이트</p>
-    <p class="cover__value"><a href="https://arda.seuk.cloud/">https://arda.seuk.cloud</a></p>
+    <p class="cover__value"><a href="https://seuk.suvisdev.cloud/">https://seuk.suvisdev.cloud</a>
+      <span class="cover__sub">API <a href="https://api.seuk.suvisdev.cloud/docs">api.seuk.suvisdev.cloud/docs</a></span></p>
 
   </div>
 

@@ -170,7 +170,8 @@ permalink: /schedule/
 <div class="sch__head">
   <h1>개발 일정 및 추진 체계</h1>
   <p>AI 기반 채용 프로세스 자동화 및 지원자 통합 관리 플랫폼 &middot;
-     도메인 오너제 / 주 단위 자율 진행 &middot; 최종 갱신 2026. 08. 28.</p>
+     도메인 오너제 / 주 단위 자율 진행 &middot; 담당은 09. 04. 재배치 기준
+     &middot; 최종 갱신 2026. 09. 22.</p>
 </div>
 
 <div class="sch__sec">
@@ -240,7 +241,7 @@ permalink: /schedule/
     </thead>
     <tbody>
       <tr>
-        <td class="dom"><span class="who who-a">재우 A</span><br>인프라 &middot; 총괄</td>
+        <td class="dom"><span class="who who-e">수택 E</span><br>인프라 &middot; 총괄</td>
         <td class="done">AWS 신청 &middot; <b>ERD 확정</b> &middot; Compose</td>
         <td class="c--gate">실배포 1차 &middot; <b>게이트 판정</b></td>
         <td>CI/CD 자동화</td>
@@ -256,7 +257,7 @@ permalink: /schedule/
         <td>테스트 &middot; 통합</td>
       </tr>
       <tr>
-        <td class="dom"><span class="who who-d">소연 D</span><br>프론트엔드</td>
+        <td class="dom"><span class="who who-c">민아 C</span><br>프론트엔드</td>
         <td>React 뼈대 &middot; 토큰 이식</td>
         <td class="c--gate"><b>전 화면 정적 + Vercel</b></td>
         <td>API 연동</td>
@@ -264,7 +265,7 @@ permalink: /schedule/
         <td>배포 &middot; 마감</td>
       </tr>
       <tr>
-        <td class="dom"><span class="who who-e">수택 E</span><br>에이전트</td>
+        <td class="dom"><span class="who who-d">소연 D</span><br>에이전트</td>
         <td class="done">추출 &middot; 에이전트 본체 <span class="tag tag--done">조기 달성</span></td>
         <td class="c--gate">목업 전달 &middot; 테스트 배치</td>
         <td>프롬프트 튜닝</td>
@@ -295,7 +296,8 @@ permalink: /schedule/
 
   <h2><span class="sch__num">3.</span> 칸반 보드</h2>
   <p class="sch__note">
-    2026. 08. 28. 기준. 카드는 왼쪽에서 오른쪽으로만 이동한다.
+    카드 배치는 2026. 08. 28. 기준이고, <b>담당 칩은 09. 04. 재배치 이후 오너</b>로 표시했다.
+    카드는 왼쪽에서 오른쪽으로만 이동한다.
     도메인 오너제에서는 각자 자기 큐를 위에서부터 소화하므로,
     <b>진행 중 컬럼은 도메인당 1건</b>을 넘지 않는 것을 원칙으로 한다.
     완료 컬럼은 주요 항목만 표시했다.
@@ -308,19 +310,19 @@ permalink: /schedule/
       <p class="col__head">백로그 <span class="col__count">10</span></p>
 
       <div class="card">CI/CD 파이프라인 자동화
-        <span class="card__meta"><span class="who who-a">재우 A</span><span class="card__wk">W3</span></span></div>
+        <span class="card__meta"><span class="who who-e">수택 E</span><span class="card__wk">W3</span></span></div>
       <div class="card">중간 통합 점검 · 통합 리허설
-        <span class="card__meta"><span class="who who-a">재우 A</span><span class="card__wk">W4–5</span></span></div>
+        <span class="card__meta"><span class="who who-e">수택 E</span><span class="card__wk">W4–5</span></span></div>
       <div class="card">불합격 사유 · 일괄 단계 변경
         <span class="card__meta"><span class="who who-b">우정 B</span><span class="card__wk">W3</span></span></div>
       <div class="card">화면 API 연동 (목데이터 제거)
-        <span class="card__meta"><span class="who who-d">소연 D</span><span class="card__wk">W3</span></span></div>
+        <span class="card__meta"><span class="who who-c">민아 C</span><span class="card__wk">W3</span></span></div>
       <div class="card">칸반 드래그 · 낙관적 업데이트 롤백
-        <span class="card__meta"><span class="who who-d">소연 D</span><span class="card__wk">W4</span></span></div>
+        <span class="card__meta"><span class="who who-c">민아 C</span><span class="card__wk">W4</span></span></div>
       <div class="card">프롬프트 튜닝 · 비용 실측
-        <span class="card__meta"><span class="who who-e">수택 E</span><span class="card__wk">W3</span></span></div>
+        <span class="card__meta"><span class="who who-d">소연 D</span><span class="card__wk">W3</span></span></div>
       <div class="card">(여유) 음성 입력 · 엔티티 해석
-        <span class="card__meta"><span class="who who-e">수택 E</span><span class="card__wk">W4</span></span></div>
+        <span class="card__meta"><span class="who who-d">소연 D</span><span class="card__wk">W4</span></span></div>
       <div class="card">JWT 로그인 연동
         <span class="card__meta"><span class="who who-c">민아 C</span><span class="card__wk">W4</span></span></div>
       <div class="card">단계 변경 · 평가 연동
@@ -333,11 +335,11 @@ permalink: /schedule/
       <p class="col__head">이번 주 (W2) <span class="col__count">5</span></p>
 
       <div class="card">실배포 1차 · 초기 버전 게이트 판정
-        <span class="card__meta"><span class="who who-a">재우 A</span><span class="card__wk">W2</span></span></div>
-      <div class="card">전 화면 정적 + Vercel 프리뷰
-        <span class="card__meta"><span class="who who-d">소연 D</span><span class="card__wk">W2</span></span></div>
-      <div class="card">주요 API 테스트 코드
         <span class="card__meta"><span class="who who-e">수택 E</span><span class="card__wk">W2</span></span></div>
+      <div class="card">전 화면 정적 + Vercel 프리뷰
+        <span class="card__meta"><span class="who who-c">민아 C</span><span class="card__wk">W2</span></span></div>
+      <div class="card">주요 API 테스트 코드
+        <span class="card__meta"><span class="who who-d">소연 D</span><span class="card__wk">W2</span></span></div>
       <div class="card">지원자 리스트 · 상세 · 로그인 (목데이터)
         <span class="card__meta"><span class="who who-c">민아 C</span><span class="card__wk">W2</span></span></div>
       <div class="card">팀 Android 기기 전원 APK 설치 확인
@@ -348,13 +350,13 @@ permalink: /schedule/
       <p class="col__head">진행 중 <span class="col__count">4</span></p>
 
       <div class="card">SES 샌드박스 해제 · IAM 최소 권한
-        <span class="card__meta"><span class="who who-a">재우 A</span><span class="card__wk">W1–2</span></span></div>
-      <div class="card">React 뼈대 · 공통 컴포넌트
-        <span class="card__meta"><span class="who who-d">소연 D</span><span class="card__wk">W1</span></span></div>
-      <div class="card">공고 목록 화면 목업 (인수)
-        <span class="card__meta"><span class="who who-d">소연 D</span><span class="card__wk">W1</span></span></div>
-      <div class="card">확정안 기준 에이전트 목업 재작업
         <span class="card__meta"><span class="who who-e">수택 E</span><span class="card__wk">W1–2</span></span></div>
+      <div class="card">React 뼈대 · 공통 컴포넌트
+        <span class="card__meta"><span class="who who-c">민아 C</span><span class="card__wk">W1</span></span></div>
+      <div class="card">공고 목록 화면 목업 (인수)
+        <span class="card__meta"><span class="who who-c">민아 C</span><span class="card__wk">W1</span></span></div>
+      <div class="card">확정안 기준 에이전트 목업 재작업
+        <span class="card__meta"><span class="who who-d">소연 D</span><span class="card__wk">W1–2</span></span></div>
     </div>
 
     <div class="col">
@@ -368,7 +370,7 @@ permalink: /schedule/
       <p class="col__head">완료 <span class="col__count">27</span></p>
 
       <div class="card">ERD 확정 · Docker Compose · 브랜치 보호
-        <span class="card__meta"><span class="who who-a">재우 A</span><span class="card__wk">W1</span></span></div>
+        <span class="card__meta"><span class="who who-e">수택 E</span><span class="card__wk">W1</span></span></div>
       <div class="card">인증 · 역할 3종 · 접근 제어
         <span class="card__meta"><span class="who who-b">우정 B</span><span class="card__wk">W1</span></span></div>
       <div class="card">검색 · 인덱스 튜닝 (111ms → 7.8ms)
@@ -378,9 +380,9 @@ permalink: /schedule/
       <div class="card">S3 presigned 업로드 · 더미 10만 건
         <span class="card__meta"><span class="who who-b">우정 B</span><span class="card__wk">W1</span></span></div>
       <div class="card">이력서 추출 PoC · 도구 호출 에이전트
-        <span class="card__meta"><span class="who who-e">수택 E</span><span class="card__wk">W1</span></span></div>
+        <span class="card__meta"><span class="who who-d">소연 D</span><span class="card__wk">W1</span></span></div>
       <div class="card">에이전트 UI 위치 · 모델 · 비용 확정
-        <span class="card__meta"><span class="who who-e">수택 E</span><span class="card__wk">W1</span></span></div>
+        <span class="card__meta"><span class="who who-d">소연 D</span><span class="card__wk">W1</span></span></div>
       <div class="card">앱 스택 Flutter 확정 · 뼈대 · 토큰 이식
         <span class="card__meta"><span class="who who-c">민아 C</span><span class="card__wk">W1</span></span></div>
       <div class="card">공고 · 지원자 API · 담당자 직접 등록
@@ -416,12 +418,12 @@ permalink: /schedule/
     </thead>
     <tbody>
       <tr>
-        <td><span class="who who-a">재우 A</span><br><span class="roles__name">이재우</span><br>
+        <td><span class="who who-e">수택 E</span><br><span class="roles__name">진수택</span><br>
             <span class="roles__stack">팀장</span></td>
         <td><a href="{{ '/role-infra/' | relative_url }}">인프라 &middot; 총괄</a></td>
         <td><code>infra/</code> <code>.github/</code> AWS</td>
-        <td>AWS · 배포 · CI/CD · GitHub 설정 · 스키마 관리 · 인터페이스 리뷰 · 통합 · 발표 총괄</td>
-        <td class="roles__stack">Docker, GitHub Actions, EC2, S3, SES, SQS</td>
+        <td>AWS · 자동 CD · CI · GitHub 설정 · alembic 이행 · 통합 · 발표 총괄</td>
+        <td class="roles__stack">Docker, GitHub Actions, EC2, S3, alembic</td>
       </tr>
       <tr>
         <td><span class="who who-b">우정 B</span><br><span class="roles__name">이우정</span></td>
@@ -431,17 +433,17 @@ permalink: /schedule/
         <td class="roles__stack">FastAPI, PostgreSQL</td>
       </tr>
       <tr>
-        <td><span class="who who-d">소연 D</span><br><span class="roles__name">박소연</span></td>
+        <td><span class="who who-c">민아 C</span><br><span class="roles__name">김민아</span></td>
         <td><a href="{{ '/role-frontend/' | relative_url }}">프론트엔드</a></td>
         <td><code>frontend/</code></td>
         <td>React 뼈대 · 공통 컴포넌트, 전 화면 구현과 연동, 칸반 드래그 · 낙관적 업데이트, 반응형</td>
         <td class="roles__stack">React, Vite, TypeScript, Vercel</td>
       </tr>
       <tr>
-        <td><span class="who who-e">수택 E</span><br><span class="roles__name">진수택</span></td>
+        <td><span class="who who-d">소연 D</span><br><span class="roles__name">박소연</span></td>
         <td><a href="{{ '/role-agent/' | relative_url }}">에이전트</a></td>
         <td><code>backend/app/agent/</code></td>
-        <td>이력서 구조화 추출 · 요약, 도구 호출 에이전트, 에이전트 API와 UI 스펙</td>
+        <td>이력서 구조화 추출 · 요약, 도구 호출 에이전트, 에이전트 API와 UI 스펙, RAG 시맨틱 검색</td>
         <td class="roles__stack">Claude API (Python SDK)</td>
       </tr>
       <tr>

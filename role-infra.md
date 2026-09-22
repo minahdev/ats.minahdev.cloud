@@ -11,16 +11,16 @@ permalink: /role-infra/
 <div class="role__head">
   <p class="role__crumb"><a href="{{ '/team/' | relative_url }}">팀 구성 및 역할</a> &rsaquo;
      인프라 &middot; 총괄</p>
-  <h1>인프라 &middot; 총괄 &middot; 담당 이재우</h1>
-  <p>전원이 딛는 바닥 &mdash; AWS &middot; 배포 &middot; CI/CD와 스키마 &middot; 인터페이스 리뷰 &middot; 통합
-     &middot; 최종 갱신 2026. 08. 28.</p>
+  <h1>인프라 &middot; 총괄 &middot; 담당 진수택</h1>
+  <p>전원이 딛는 바닥 &mdash; AWS &middot; 자동 CD &middot; CI와 스키마 이행 &middot; 통합
+     &middot; 최종 갱신 2026. 09. 22.</p>
 </div>
 
 <div class="role__stat">
   <div class="stat"><span class="stat__k">담당</span>
-    <span class="stat__v">이재우 <span class="who who-a">재우 A</span></span></div>
+    <span class="stat__v">진수택 <span class="who who-e">수택 E</span></span></div>
   <div class="stat"><span class="stat__k">겸임</span>
-    <span class="stat__v">팀장<small>총괄</small></span></div>
+    <span class="stat__v">팀장<small>09. 04. 승계</small></span></div>
   <div class="stat"><span class="stat__k">소유 폴더</span>
     <span class="stat__v"><code>infra/</code> <code>.github/</code></span></div>
   <div class="stat"><span class="stat__k">스택</span>

@@ -56,15 +56,15 @@ permalink: /team/
 <div class="role__head">
   <p class="role__crumb"><a href="{{ '/toc/' | relative_url }}">목차</a> &rsaquo; 2. 팀 구성 및 역할</p>
   <h1>팀 구성 및 역할</h1>
-  <p>seuk &middot; 5명 &middot; 도메인 오너제 &mdash; 사람마다 도메인 하나를 소유한다
-     &middot; 최종 갱신 2026. 08. 28.</p>
+  <p>seuk &middot; 4명 &middot; 5도메인 &middot; 도메인 오너제 &mdash; 도메인마다 오너가 하나다
+     &middot; 최종 갱신 2026. 09. 22.</p>
 </div>
 
 <div class="role__stat">
   <div class="stat"><span class="stat__k">개발 인원</span>
-    <span class="stat__v">5<small>명</small></span></div>
+    <span class="stat__v">4<small>명 (09. 02. 1명 이탈)</small></span></div>
   <div class="stat"><span class="stat__k">도메인</span>
-    <span class="stat__v">5<small>1인 1도메인</small></span></div>
+    <span class="stat__v">5<small>4인 5도메인</small></span></div>
   <div class="stat"><span class="stat__k">운영 방식</span>
     <span class="stat__v">오너제<small>2026. 08. 24. 전환</small></span></div>
   <div class="stat"><span class="stat__k">초기 버전</span>
@@ -77,22 +77,28 @@ permalink: /team/
 
   <h2><span class="role__num">1.</span> 개발 인원 소개</h2>
   <p class="role__note">
-    사람마다 도메인 하나를 소유한다. <b>자기 도메인의 로드맵이 자기 작업의 기준</b>이고,
+    도메인마다 오너가 하나다. <b>자기 도메인의 로드맵이 자기 작업의 기준</b>이고,
     범위 &middot; 마일스톤 &middot; 작업 큐 &middot; 완료 기준이 전부 거기에 있다.
     소유 폴더 밖은 자기 것이 아니다.
+  </p>
+  <p class="role__note">
+    <b>2026. 09. 02. 인프라 &middot; 총괄 오너(팀장)가 이탈</b>했고, 09. 04. 남은 4명으로
+    도메인을 재배치했다. 팀장은 진수택이 승계하며 인프라를 겸하고, 비게 된 에이전트는
+    박소연이, 프론트엔드는 김민아가 앱과 함께 맡는다. 아래는 <b>재배치 이후 현재 배정</b>이다.
   </p>
 
   <div class="dom">
 
     <div class="dom__card">
       <div class="dom__top">
-        <span class="dom__name">이재우</span>
-        <span class="who who-a">재우 A</span>
+        <span class="dom__name">진수택</span>
+        <span class="who who-e">수택 E</span>
         <span class="dom__area">인프라 &middot; 총괄 (팀장)</span>
       </div>
       <p class="dom__dir">infra/ &middot; .github/ &middot; docker-compose &middot; AWS</p>
       <p class="dom__mission">
         전원이 딛는 바닥. 의존이 없는 대신 <b>전원의 선행 조건</b>이 된다.
+        09. 04. 팀장 승계 &mdash; 게이트가 아니라 <b>도메인 밖 조정만</b> 맡는다.
       </p>
       <a class="dom__more" href="{{ '/role-infra/' | relative_url }}">역할 상세 &rarr;</a>
     </div>
@@ -112,9 +118,9 @@ permalink: /team/
 
     <div class="dom__card">
       <div class="dom__top">
-        <span class="dom__name">박소연</span>
-        <span class="who who-d">소연 D</span>
-        <span class="dom__area">프론트엔드</span>
+        <span class="dom__name">김민아</span>
+        <span class="who who-c">민아 C</span>
+        <span class="dom__area">프론트엔드 <small>09. 04. 인계</small></span>
       </div>
       <p class="dom__dir">frontend/</p>
       <p class="dom__mission">
@@ -125,9 +131,9 @@ permalink: /team/
 
     <div class="dom__card">
       <div class="dom__top">
-        <span class="dom__name">진수택</span>
-        <span class="who who-e">수택 E</span>
-        <span class="dom__area">에이전트</span>
+        <span class="dom__name">박소연</span>
+        <span class="who who-d">소연 D</span>
+        <span class="dom__area">에이전트 <small>09. 04. 인계</small></span>
       </div>
       <p class="dom__dir">backend/app/agent/</p>
       <p class="dom__mission">
@@ -140,7 +146,7 @@ permalink: /team/
       <div class="dom__top">
         <span class="dom__name">김민아</span>
         <span class="who who-c">민아 C</span>
-        <span class="dom__area">앱 (모바일)</span>
+        <span class="dom__area">앱 (모바일) <small>프론트와 겸임</small></span>
       </div>
       <p class="dom__dir">mobile/</p>
       <p class="dom__mission">
@@ -169,12 +175,12 @@ permalink: /team/
     </thead>
     <tbody>
       <tr>
-        <td><span class="who who-a">재우 A</span><br><b>이재우</b><br>
+        <td><span class="who who-e">수택 E</span><br><b>진수택</b><br>
             <span class="stat__k">팀장</span></td>
         <td>인프라 &middot; 총괄</td>
-        <td>AWS &middot; 배포 &middot; CI/CD &middot; GitHub 설정 &middot; 스키마 관리.
-            총괄로서 인터페이스 리뷰 &middot; 통합 &middot; 발표</td>
-        <td>Docker, GitHub Actions, EC2, S3, SES, SQS</td>
+        <td>AWS &middot; 자동 CD(main 머지 &rarr; 2분 폴링) &middot; CI &middot; GitHub 설정 &middot;
+            경보 &middot; 백업. 총괄로서 마일스톤 &middot; 범위 합의 &middot; 통합 &middot; 발표</td>
+        <td>Docker, GitHub Actions, EC2, S3, alembic</td>
       </tr>
       <tr>
         <td><span class="who who-b">우정 B</span><br><b>이우정</b></td>
@@ -184,17 +190,17 @@ permalink: /team/
         <td>FastAPI, PostgreSQL</td>
       </tr>
       <tr>
-        <td><span class="who who-d">소연 D</span><br><b>박소연</b></td>
-        <td>프론트엔드</td>
+        <td><span class="who who-c">민아 C</span><br><b>김민아</b></td>
+        <td>프론트엔드<br><span class="stat__k">09. 04. 인계</span></td>
         <td>React 뼈대 &middot; 공통 컴포넌트, 전 화면 구현과 API 연동,
             칸반 드래그 &middot; 낙관적 업데이트, 반응형</td>
         <td>React, Vite, TypeScript, Vercel</td>
       </tr>
       <tr>
-        <td><span class="who who-e">수택 E</span><br><b>진수택</b></td>
-        <td>에이전트</td>
+        <td><span class="who who-d">소연 D</span><br><b>박소연</b></td>
+        <td>에이전트<br><span class="stat__k">09. 04. 인계</span></td>
         <td>이력서 구조화 추출 &middot; 요약, 도구 호출 에이전트,
-            에이전트 API와 UI 스펙, (여유) 음성 입력 &middot; RAG</td>
+            에이전트 API와 UI 스펙, RAG 시맨틱 검색</td>
         <td>Claude API (Python SDK)</td>
       </tr>
       <tr>
@@ -223,8 +229,8 @@ permalink: /team/
     <div class="dep__layer dep__layer--base">
       <span class="dep__k">바닥 &mdash; 의존 없음</span>
       <p class="dep__v">
-        <span class="who who-a">재우 A</span> <b>인프라</b> &mdash; 아무에게도 의존하지 않는다.
-        그래서 <b>전부의 선행 조건</b>이 된다. 여기가 밀리면 나머지 넷이 대기한다.
+        <span class="who who-e">수택 E</span> <b>인프라</b> &mdash; 아무에게도 의존하지 않는다.
+        그래서 <b>전부의 선행 조건</b>이 된다. 여기가 밀리면 나머지 전부가 대기한다.
       </p>
     </div>
 
@@ -240,18 +246,19 @@ permalink: /team/
     <div class="dep__layer">
       <span class="dep__k">소비 &mdash; 백엔드에 의존</span>
       <p class="dep__v">
-        <span class="who who-d">소연 D</span> <b>프론트엔드</b> &mdash; 초반 두 마일스톤을
-        목데이터로 진행해 백엔드를 기다리지 않는다. 대신 <b>목데이터 필드명을 ERD와 동일하게</b>
-        맞춰 연동이 필드 교체만으로 끝나게 했다.<br>
-        <span class="who who-c">민아 C</span> <b>앱</b> &mdash; 소비만 하고 제공은 없다.
-        격리 수준이 가장 높아 <b>앱이 실패해도 다른 파트가 멈추지 않는다.</b>
+        <span class="who who-c">민아 C</span> <b>프론트엔드 &middot; 앱</b> &mdash; 한 사람이 둘을
+        쥐고 있다. 초반 두 마일스톤을 목데이터로 진행해 백엔드를 기다리지 않았고,
+        <b>목데이터 필드명을 ERD와 동일하게</b> 맞춰 연동이 필드 교체만으로 끝나게 했다.
+        둘 다 소비만 하고 제공은 없어 <b>여기가 실패해도 다른 파트가 멈추지 않는다.</b>
+        대신 <b>겸임이라 두 클라이언트가 같은 사람의 일정에 묶인다</b> &mdash; 그래서 웹을
+        먼저 끝내고 앱을 뒤에 두는 순서로 밀린다.
       </p>
     </div>
 
     <div class="dep__layer">
       <span class="dep__k">양방향 &mdash; 백엔드와 서로 주고받음</span>
       <p class="dep__v">
-        <span class="who who-e">수택 E</span> <b>에이전트</b> &mdash; 백엔드 API를 도구로
+        <span class="who who-d">소연 D</span> <b>에이전트</b> &mdash; 백엔드 API를 도구로
         호출하는 동시에, 지원서 접수 흐름이 부를 요약 생성 함수를 백엔드에 제공한다.
         <b>함수 시그니처는 두 오너 간 인터페이스 PR로 합의</b>한다.
       </p>
@@ -260,10 +267,12 @@ permalink: /team/
   </div>
 
   <p class="role__note" style="margin-top:1.1rem; margin-bottom:0;">
-    에이전트와 앱은 초기 버전(09. 04.) 범위 밖이다. 두 트랙 모두 <b>코어 기능이 항상 우선</b>이고,
+    에이전트와 앱은 초기 버전(09. 04.) 범위 밖이었다. 두 트랙 모두 <b>코어 기능이 항상 우선</b>이고,
     코어 데모는 두 트랙 없이도 완결된다. 그래서 전환기(&sim;09. 04.) 동안 두 담당자는 자기 트랙과
     병행해 백엔드 큐를 나눠 맡았다 &mdash; <b>앱 담당자의 경우 자기 트랙의 선행 조건인 지원자 API를
-    본인 손으로 푸는 구조</b>였다.
+    본인 손으로 푸는 구조</b>였다. 09. 04. 재배치 이후 두 트랙 모두 정식 트랙으로 올라왔고,
+    <b>이 표의 색은 사람마다 고정</b>이므로 일정 페이지의 과거 기록과 담당 도메인이
+    어긋나 보일 수 있다 &mdash; 재배치 이전 기록이기 때문이다.
   </p>
 
 </div>
@@ -317,8 +326,8 @@ permalink: /team/
     <div class="ops__item">
       <h3>30분 룰</h3>
       <span class="ops__when">전원</span>
-      <p>30분 넘게 막히면 혼자 붙들지 말고 팀 채널에 묻는다. 1인 1도메인 구조에서
-         혼자 오래 막히는 것이 가장 큰 지연 요인이기 때문이다.</p>
+      <p>30분 넘게 막히면 혼자 붙들지 말고 팀 채널에 묻는다. 도메인마다 오너가 한 명인
+         구조에서 혼자 오래 막히는 것이 가장 큰 지연 요인이기 때문이다.</p>
     </div>
 
   </div>
@@ -340,30 +349,28 @@ permalink: /team/
     </thead>
     <tbody>
       <tr>
-        <td><span class="who who-a">재우 A</span> <b>이재우</b></td>
+        <td><span class="who who-e">수택 E</span> <b>진수택</b></td>
         <td>인프라 &middot; 총괄</td>
-        <td>배포 파이프라인 &middot; 권한 모델 + <b>리뷰 병목을 구조로 푼 과정</b></td>
+        <td>자동 CD(main 머지 &rarr; 2분 폴링 배포)에 <b>alembic 이행을 넣은 과정</b> &middot;
+            서명 개인키를 서버 밖(GitHub Actions)으로 뺀 결정</td>
       </tr>
       <tr>
         <td><span class="who who-b">우정 B</span> <b>이우정</b></td>
         <td>백엔드</td>
-        <td>상태 전환 규칙을 DB와 코드 중 어디서 강제했는가 + <b>인덱스 튜닝 전후 수치</b></td>
+        <td>상태 전환 규칙을 DB와 코드 중 어디서 강제했는가 + <b>인덱스 튜닝 전후 수치</b>
+            + 제출물 무결성 앵커</td>
       </tr>
       <tr>
         <td><span class="who who-d">소연 D</span> <b>박소연</b></td>
-        <td>프론트엔드</td>
-        <td>드래그 실패 시 <b>낙관적 업데이트를 어떻게 롤백했는가</b></td>
-      </tr>
-      <tr>
-        <td><span class="who who-e">수택 E</span> <b>진수택</b></td>
         <td>에이전트</td>
         <td>도구 호출 에이전트 &mdash; <b>왜 쓰기 도구에만 확인 단계를 강제했는가</b></td>
       </tr>
       <tr>
         <td><span class="who who-c">민아 C</span> <b>김민아</b></td>
-        <td>앱</td>
+        <td>앱 + 프론트엔드</td>
         <td>같은 API로 웹 &middot; 앱 두 클라이언트 &mdash;
-            <b>클라이언트 추가에 서버 변경이 몇 줄이었는가</b></td>
+            <b>클라이언트 추가에 서버 변경이 몇 줄이었는가</b> &middot;
+            드래그 실패 시 낙관적 업데이트를 어떻게 롤백했는가</td>
       </tr>
     </tbody>
   </table>

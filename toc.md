@@ -69,13 +69,13 @@ permalink: /toc/
   <h2><span class="toc__num">2.</span>
     <a href="{{ '/team/' | relative_url }}">팀 구성 및 역할</a></h2>
   <ul>
-    <li>개발 인원 소개 &mdash; 5인 1도메인</li>
+    <li>개발 인원 소개 &mdash; 4인 5도메인</li>
     <li>역할 분담 &middot; 의존 구조</li>
-    <li>협업 방식 (도메인 오너제)</li>
-    <li><a href="{{ '/role-infra/' | relative_url }}">인프라 &middot; 총괄 &mdash; 이재우</a></li>
+    <li>협업 방식 (도메인 오너제) &middot; 09. 04. 재배치</li>
+    <li><a href="{{ '/role-infra/' | relative_url }}">인프라 &middot; 총괄 &mdash; 진수택</a></li>
     <li><a href="{{ '/role-backend/' | relative_url }}">백엔드 &mdash; 이우정</a></li>
-    <li><a href="{{ '/role-frontend/' | relative_url }}">프론트엔드 &mdash; 박소연</a></li>
-    <li><a href="{{ '/role-agent/' | relative_url }}">에이전트 &mdash; 진수택</a></li>
+    <li><a href="{{ '/role-frontend/' | relative_url }}">프론트엔드 &mdash; 김민아</a></li>
+    <li><a href="{{ '/role-agent/' | relative_url }}">에이전트 &mdash; 박소연</a></li>
     <li><a href="{{ '/role-app/' | relative_url }}">앱 (모바일) &mdash; 김민아</a></li>
   </ul>
 </div>

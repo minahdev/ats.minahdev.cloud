@@ -11,14 +11,14 @@ permalink: /role-agent/
 <div class="role__head">
   <p class="role__crumb"><a href="{{ '/team/' | relative_url }}">팀 구성 및 역할</a> &rsaquo;
      에이전트</p>
-  <h1>에이전트 &middot; 담당 진수택</h1>
+  <h1>에이전트 &middot; 담당 박소연</h1>
   <p>버튼으로 안 되는 작업을 에이전트로 &mdash; 최종 확정은 항상 사람
-     &middot; 최종 갱신 2026. 08. 28.</p>
+     &middot; 2026. 09. 04. 인계 &middot; 최종 갱신 2026. 09. 22.</p>
 </div>
 
 <div class="role__stat">
   <div class="stat"><span class="stat__k">담당</span>
-    <span class="stat__v">진수택 <span class="who who-e">수택 E</span></span></div>
+    <span class="stat__v">박소연 <span class="who who-d">소연 D</span></span></div>
   <div class="stat"><span class="stat__k">소유 폴더</span>
     <span class="stat__v"><code>app/agent/</code></span></div>
   <div class="stat"><span class="stat__k">스택</span>

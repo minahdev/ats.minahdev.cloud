@@ -13,7 +13,7 @@ permalink: /role-app/
      팀 구성 및 역할 &rsaquo; 앱 (모바일)</p>
   <h1>앱 (모바일) &middot; 담당 김민아</h1>
   <p>담당자 &middot; 면접관용 모바일 네이티브 앱 &mdash; 웹과 같은 API를 쓰는 두 번째 클라이언트
-     &middot; 최종 갱신 2026. 08. 28.</p>
+     &middot; 최종 갱신 2026. 09. 22.</p>
 </div>
 
 <div class="role__stat">

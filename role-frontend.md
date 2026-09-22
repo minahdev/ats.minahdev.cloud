@@ -11,14 +11,14 @@ permalink: /role-frontend/
 <div class="role__head">
   <p class="role__crumb"><a href="{{ '/team/' | relative_url }}">팀 구성 및 역할</a> &rsaquo;
      프론트엔드</p>
-  <h1>프론트엔드 &middot; 담당 박소연</h1>
+  <h1>프론트엔드 &middot; 담당 김민아</h1>
   <p>목업 8장을 실제 React 제품으로 &mdash; 칸반 드래그가 이 프로젝트의 얼굴
-     &middot; 최종 갱신 2026. 08. 28.</p>
+     &middot; 2026. 09. 04. 인계(앱과 겸임) &middot; 최종 갱신 2026. 09. 22.</p>
 </div>
 
 <div class="role__stat">
   <div class="stat"><span class="stat__k">담당</span>
-    <span class="stat__v">박소연 <span class="who who-d">소연 D</span></span></div>
+    <span class="stat__v">김민아 <span class="who who-c">민아 C</span></span></div>
   <div class="stat"><span class="stat__k">소유 폴더</span>
     <span class="stat__v"><code>frontend/</code></span></div>
   <div class="stat"><span class="stat__k">스택</span>

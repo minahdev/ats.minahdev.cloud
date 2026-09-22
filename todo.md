@@ -51,7 +51,7 @@ permalink: /todo/
 
 <div class="todo__head">
   <h1>미결 항목</h1>
-  <p>결정이 필요하거나 아직 착수하지 않은 항목 &middot; 최종 갱신 2026. 08. 28.</p>
+  <p>결정이 필요하거나 아직 착수하지 않은 항목 &middot; 최종 갱신 2026. 09. 22.</p>
 </div>
 
 <div class="todo__item">
@@ -60,18 +60,6 @@ permalink: /todo/
     12장 중 <b>2장(팀 구성 및 역할)</b>과 <b>10장(개발 일정 및 추진 체계)</b>은 작성됐다.
     나머지 10개 장이 남았다. 각 장은 <code>_posts/</code>가 아니라 루트의 <code>.md</code>
     페이지로 만들고 <code>permalink</code>를 지정한다.
-  </p>
-</div>
-
-<div class="todo__item">
-  <p class="todo__title">커스텀 도메인 <code>ats.minahdev.cloud</code> 연결<span class="todo__status is-waiting">결정 대기</span></p>
-  <p class="todo__desc">
-    <b>이 보고서 사이트의 도메인이다</b> — 데모 사이트(<code>arda.seuk.cloud</code>)와는 다르다.
-    DNS 레코드가 아직 없다. DNS가 GitHub Pages를 가리키기 전에 <code>CNAME</code> 파일을
-    추가하면 사이트가 접속 불가가 되므로, DNS 확인 후에 추가해야 한다.
-    이때 <code>baseurl</code>을 <code>""</code>로, <code>url</code>을
-    <code>https://ats.minahdev.cloud</code>로 함께 바꿔야 한다 — 하나만 바꾸면
-    CSS와 내부 링크가 모두 깨진다.
   </p>
 </div>
 
@@ -92,12 +80,14 @@ permalink: /todo/
 </div>
 
 <div class="todo__item">
-  <p class="todo__title">개발 로그 공백 (08. 22. ~ 28.)<span class="todo__status is-open">미착수</span></p>
+  <p class="todo__title">개발 로그 공백 (08. 22. ~ 09. 22.)<span class="todo__status is-open">미착수</span></p>
   <p class="todo__desc">
     <code>/log/</code>의 마지막 기록이 08. 21.이다. 그 사이 도메인 오너제 전환, ERD 확정,
-    코어 API, 앱 스택 확정과 뼈대 등 실제 진행이 있었으므로 주차 단위로 메워야 한다.
-    스프린트 체계를 접으면서 <code>/sprint-1/</code> 일자별 페이지를 삭제했으므로,
-    <b>08. 20. ~ 21.의 기록도 이 로그로 옮겨야 한다.</b>
+    코어 API, 앱 스택 확정과 뼈대에 더해 <b>09. 02. 팀장 이탈과 09. 04. 도메인 재배치 &middot;
+    저장소 이관(<code>Team-Seuk/Arda</code> &rarr; <code>Seuk-Team/Arda</code>) &middot;
+    브랜치&rarr;PR 체계 전환 &middot; 자동 CD 도입</b>까지 한 달치 진행이 비어 있다.
+    주차 단위로 메워야 한다. 스프린트 체계를 접으면서 <code>/sprint-1/</code> 일자별 페이지를
+    삭제했으므로, <b>08. 20. ~ 21.의 기록도 이 로그로 옮겨야 한다.</b>
   </p>
 </div>
 
