@@ -7,11 +7,11 @@ description: >-
 # 푸터의 깃허브 링크. email을 추가하면 푸터에 메일 주소가 공개되므로 넣지 않았다.
 github_username: minahdev
 
-# 지금은 프로젝트 페이지(minahdev.github.io/ats.minahdev.cloud/)로 서빙되므로
-# baseurl에 리포 이름 경로가 필요하다. 커스텀 도메인 ats.minahdev.cloud를 붙이면
-# baseurl은 ""로, url은 "https://ats.minahdev.cloud"로 바꿔야 한다.
-baseurl: "/ats.minahdev.cloud"
-url: "https://minahdev.github.io"
+# 커스텀 도메인 ats.minahdev.cloud로 서빙된다(2026-09-22). 사이트가 도메인 루트에
+# 있으므로 baseurl은 비운다. 리포 이름 경로(/ats.minahdev.cloud)를 다시 넣으면
+# CSS와 내부 링크가 전부 404가 난다. 도메인 설정은 루트의 CNAME 파일이 들고 있다.
+baseurl: ""
+url: "https://ats.minahdev.cloud"
 
 theme: minima
 plugins:

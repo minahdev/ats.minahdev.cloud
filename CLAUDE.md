@@ -3,7 +3,8 @@
 Jekyll + minima 테마 정적 사이트. GitHub Pages가 빌드·서빙한다.
 
 - 리포: `minahdev/ats.minahdev.cloud` (public)
-- **배포된 사이트**: https://minahdev.github.io/ats.minahdev.cloud/ (항상 접속 가능)
+- **배포된 사이트**: https://ats.minahdev.cloud/ (커스텀 도메인, 2026-09-22 연결)
+  - `https://minahdev.github.io/ats.minahdev.cloud/`로 들어와도 위 주소로 리다이렉트된다
 - 배포 방식: GitHub Pages **legacy 빌드** (Deploy from a branch → `main`, 루트 `/`)
 - `main`에 push하면 자동으로 다시 빌드된다. CI 워크플로 파일은 없다.
 
@@ -138,24 +139,18 @@ permalink: /경로/
 
 ## `_config.yml` 주의사항
 
-`baseurl`과 도메인은 한 몸이다. 지금은 프로젝트 페이지로 서빙되므로:
-
-```yaml
-baseurl: "/ats.minahdev.cloud"
-url: "https://minahdev.github.io"
-```
-
-**커스텀 도메인 `ats.minahdev.cloud`를 붙이게 되면 반드시 함께 바꿀 것:**
+`baseurl`과 도메인은 한 몸이다. 커스텀 도메인으로 서빙되므로 둘 다 이 값이어야 한다:
 
 ```yaml
 baseurl: ""
 url: "https://ats.minahdev.cloud"
 ```
 
-둘 중 하나만 바꾸면 CSS와 모든 내부 링크가 깨진다.
+`baseurl`에 리포 이름 경로(`/ats.minahdev.cloud`)를 다시 넣으면 CSS와 모든 내부
+링크가 404가 된다. 둘 중 하나만 바꿔도 마찬가지로 깨진다.
 
-- 현재 `ats.minahdev.cloud`는 **DNS 레코드가 없다.** DNS가 GitHub Pages를 가리키기
-  전에 `CNAME` 파일을 추가하면 사이트가 접속 불가가 되므로, DNS 확인 후에 추가할 것
+- **루트의 `CNAME` 파일(`ats.minahdev.cloud`)을 지우지 말 것.** 이 파일이 커스텀
+  도메인 설정을 들고 있고, 없으면 다음 빌드에서 Settings → Pages의 설정이 풀린다
 - `_config.yml`을 고쳐도 `jekyll serve`는 자동 반영하지 않는다. 서버를 재시작할 것
 - **플러그인은 GitHub Pages 화이트리스트에 있는 것만 동작한다.** legacy 빌드는
   임의의 gem을 무시한다. 화이트리스트 밖 플러그인이 필요하면 GitHub Actions 배포로
@@ -171,7 +166,7 @@ url: "https://ats.minahdev.cloud"
 
 ```bash
 gh api repos/minahdev/ats.minahdev.cloud/pages/builds/latest --jq '.status, .error.message'
-curl -sS -o /dev/null -w '%{http_code}\n' https://minahdev.github.io/ats.minahdev.cloud/
+curl -sS -o /dev/null -w '%{http_code}\n' https://ats.minahdev.cloud/
 ```
 
 `status`가 `built`이고 HTTP 200이어야 완료다. `errored`면 `.error.message`에 원인이 있다.
