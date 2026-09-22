@@ -55,11 +55,22 @@ permalink: /todo/
 </div>
 
 <div class="todo__item">
-  <p class="todo__title">보고서 본문 잔여 장 작성<span class="todo__status is-planned">진행 예정</span></p>
+  <p class="todo__title">보고서 본문 재검토<span class="todo__status is-planned">진행 예정</span></p>
   <p class="todo__desc">
-    12장 중 <b>2장(팀 구성 및 역할)</b>과 <b>10장(개발 일정 및 추진 체계)</b>은 작성됐다.
-    나머지 10개 장이 남았다. 각 장은 <code>_posts/</code>가 아니라 루트의 <code>.md</code>
-    페이지로 만들고 <code>permalink</code>를 지정한다.
+    09. 22. 에 12개 장의 초안이 모두 채워졌다. 다만 본문은 <b>팀 문서
+    (<a href="https://ats.suvisdev.cloud/">ats.suvisdev.cloud</a>)와 저장소 문서를 근거로
+    작성한 것</b>이라, 본인이 직접 수행한 앱 &middot; 프론트엔드 파트의 서술이 상대적으로 얇다.
+    발표 전에 그 두 도메인의 1인칭 근거(실제 겪은 문제 &middot; 선택 &middot; 수치)를 보강해야 한다.
+  </p>
+</div>
+
+<div class="todo__item">
+  <p class="todo__title">개발 방법론 표기 통일<span class="todo__status is-waiting">결정 대기</span></p>
+  <p class="todo__desc">
+    팀 문서 사이트는 <b>애자일 스크럼 &middot; 2주 1스프린트 &middot; 총 5스프린트</b>로 적고,
+    이 보고서와 저장소 문서(<code>06-weekly.md</code>)는 <b>스프린트를 접고 게이트 2개 +
+    주 단위 자율 진행</b>으로 적는다. 발표에서 두 서술이 충돌하므로 팀 차원에서
+    어느 쪽으로 말할지 정해야 한다 &mdash; 도메인 밖 사안이라 팀장(진수택)과 합의 대상이다.
   </p>
 </div>
 
@@ -80,14 +91,11 @@ permalink: /todo/
 </div>
 
 <div class="todo__item">
-  <p class="todo__title">개발 로그 공백 (08. 22. ~ 09. 22.)<span class="todo__status is-open">미착수</span></p>
+  <p class="todo__title">개발 로그 세부 보강<span class="todo__status is-planned">진행 예정</span></p>
   <p class="todo__desc">
-    <code>/log/</code>의 마지막 기록이 08. 21.이다. 그 사이 도메인 오너제 전환, ERD 확정,
-    코어 API, 앱 스택 확정과 뼈대에 더해 <b>09. 02. 팀장 이탈과 09. 04. 도메인 재배치 &middot;
-    저장소 이관(<code>Team-Seuk/Arda</code> &rarr; <code>Seuk-Team/Arda</code>) &middot;
-    브랜치&rarr;PR 체계 전환 &middot; 자동 CD 도입</b>까지 한 달치 진행이 비어 있다.
-    주차 단위로 메워야 한다. 스프린트 체계를 접으면서 <code>/sprint-1/</code> 일자별 페이지를
-    삭제했으므로, <b>08. 20. ~ 21.의 기록도 이 로그로 옮겨야 한다.</b>
+    09. 22. 에 08. 22. ~ 09. 22. 한 달치 공백을 주차 단위로 메웠다. 다만 팀 전체 관점의
+    기록이라, <b>본인이 직접 커밋한 앱 &middot; 프론트엔드 작업</b>은 주차 요약에 묻혀 있다.
+    발표에서 자기 몫을 말하려면 그 부분을 날짜 단위로 더 쪼개는 편이 낫다.
   </p>
 </div>
 

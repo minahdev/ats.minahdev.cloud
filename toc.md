@@ -56,7 +56,8 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">1.</span> 사업 개요</h2>
+  <h2><span class="toc__num">1.</span>
+    <a href="{{ '/overview/' | relative_url }}">사업 개요</a></h2>
   <ul>
     <li>추진 배경 및 필요성</li>
     <li>개발 목적</li>
@@ -81,7 +82,8 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">3.</span> 요구사항 분석</h2>
+  <h2><span class="toc__num">3.</span>
+    <a href="{{ '/requirements/' | relative_url }}">요구사항 분석</a></h2>
   <ul>
     <li>기존 채용 프로세스의 문제점</li>
     <li>기능 요구사항</li>
@@ -91,7 +93,8 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">4.</span> 시스템 설계</h2>
+  <h2><span class="toc__num">4.</span>
+    <a href="{{ '/design/' | relative_url }}">시스템 설계</a></h2>
   <ul>
     <li>시스템 아키텍처</li>
     <li>데이터베이스 설계 (ERD)</li>
@@ -101,7 +104,8 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">5.</span> 기술 스택 및 개발 환경</h2>
+  <h2><span class="toc__num">5.</span>
+    <a href="{{ '/stack/' | relative_url }}">기술 스택 및 개발 환경</a></h2>
   <ul>
     <li>기술 스택 선정 및 근거</li>
     <li>개발 환경 구성</li>
@@ -110,7 +114,8 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">6.</span> 주요 기능 개발</h2>
+  <h2><span class="toc__num">6.</span>
+    <a href="{{ '/features/' | relative_url }}">주요 기능 개발</a></h2>
   <ul>
     <li>채용 공고 등록 및 관리</li>
     <li>지원자 통합 관리</li>
@@ -122,7 +127,8 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">7.</span> AI 모델 적용</h2>
+  <h2><span class="toc__num">7.</span>
+    <a href="{{ '/ai-model/' | relative_url }}">AI 모델 적용</a></h2>
   <ul>
     <li>모델 선정 및 비교</li>
     <li>프롬프트 및 파이프라인 설계</li>
@@ -132,7 +138,8 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">8.</span> 테스트</h2>
+  <h2><span class="toc__num">8.</span>
+    <a href="{{ '/testing/' | relative_url }}">테스트</a></h2>
   <ul>
     <li>테스트 계획</li>
     <li>단위 및 통합 테스트</li>
@@ -142,7 +149,8 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">9.</span> 배포 및 운영</h2>
+  <h2><span class="toc__num">9.</span>
+    <a href="{{ '/deployment/' | relative_url }}">배포 및 운영</a></h2>
   <ul>
     <li>배포 구성</li>
     <li>CI/CD 파이프라인</li>
@@ -163,7 +171,8 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">11.</span> 결론 및 향후 과제</h2>
+  <h2><span class="toc__num">11.</span>
+    <a href="{{ '/conclusion/' | relative_url }}">결론 및 향후 과제</a></h2>
   <ul>
     <li>개발 성과</li>
     <li>한계점</li>
@@ -172,7 +181,8 @@ permalink: /toc/
 </div>
 
 <div class="toc__ch">
-  <h2><span class="toc__num">12.</span> 부록</h2>
+  <h2><span class="toc__num">12.</span>
+    <a href="{{ '/appendix/' | relative_url }}">부록</a></h2>
   <ul>
     <li>용어 정의</li>
     <li>관련 서식</li>
