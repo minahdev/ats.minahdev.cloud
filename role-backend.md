@@ -13,7 +13,7 @@ permalink: /role-backend/
      백엔드</p>
   <h1>백엔드 &middot; 담당 이우정</h1>
   <p>화면 &middot; 앱 &middot; 에이전트가 딛고 서는 모든 API와 데이터
-     &middot; 최종 갱신 2026. 09. 22.</p>
+     &middot; 최종 갱신 2026. 09. 29.</p>
 </div>
 
 <div class="role__stat">
@@ -50,10 +50,14 @@ permalink: /role-backend/
     <div class="scope__box scope__box--in">
       <h3>포함</h3>
       <ul>
-        <li>인증 &middot; 권한 &mdash; JWT, 역할 3종, 면접관 배정 조회 제한</li>
+        <li>인증 &middot; 권한 &mdash; JWT, 역할 2종(<code>admin</code> &middot; <code>member</code>).
+            2026. 08. 31. 개정으로 <b>면접관 배정 조회 제한은 폐지</b>했고, 남은 제한은
+            평가 작성(배정된 건만)과 admin 전용 넷뿐이다</li>
         <li>도메인 API &mdash; 공고 &middot; 지원서 &middot; 지원자 관리(단계 전환 포함) &middot;
             평가 &middot; 메모</li>
         <li>검색 &middot; 필터 &middot; 정렬 &middot; 페이지네이션 + 인덱스 튜닝</li>
+        <li>스키마 &mdash; <b>인덱스 추가까지 측정 &middot; 제안 &middot; 반영 전부 이 도메인이다.</b>
+            ERD 갱신과 alembic 리비전을 코드와 같은 커밋에 묶고 머지 뒤 팀 채널에 한 줄 공지한다</li>
         <li>파일(S3 presigned) &middot; 메일(SES + SQS 워커) &mdash; <b>코드만</b></li>
         <li>더미 데이터 10만 건 &middot; 구조화 로깅 &middot; 에러 코드 표준 &middot; API 테스트</li>
       </ul>
@@ -62,8 +66,6 @@ permalink: /role-backend/
     <div class="scope__box scope__box--out">
       <h3>제외</h3>
       <ul>
-        <li>스키마 변경 &mdash; ERD 확정 후 전원 합의로만. <b>인덱스 추가도 스키마 변경이다</b> &mdash;
-            측정과 제안까지가 이 도메인, 반영은 총괄</li>
         <li>버킷 &middot; 큐 &middot; SES 도메인 등 AWS 리소스 준비 &mdash; 인프라 소관</li>
         <li><code>backend/app/agent/</code> &mdash; 에이전트 도메인</li>
         <li>Docker Compose &middot; CI/CD &mdash; 인프라 도메인</li>
@@ -80,12 +82,13 @@ permalink: /role-backend/
 
   <p class="role__p">
     <b>제공</b> &mdash; API 문서에 정의된 REST 전부. 상세는 Swagger가 진실이다.
-    <b>엔드포인트를 추가하거나 바꾸면 API 문서 갱신을 같은 PR에 포함하고, 그 PR은 총괄 승인을
-    받는다.</b> 소비자는 프론트엔드 &middot; 앱 &middot; 에이전트 3종이다.
+    <b>엔드포인트를 추가하거나 바꾸면 API 문서 갱신을 같은 커밋에 넣고, 머지 뒤 팀 채널에 한 줄
+    공지한다</b> &mdash; 2026. 08. 28. 리뷰 게이트 폐지로 승인 절차는 없다. 소비자는 프론트엔드
+    &middot; 앱 &middot; 에이전트 3종이다.
   </p>
   <p class="role__p">
     <b>의존</b> &mdash; 인프라(접속 문자열 &middot; AWS 자격 &middot; S3 버킷 &middot; SQS 큐 &middot;
-    SES 발신 도메인), 스키마 확정, 그리고 에이전트가 제공하는 요약 생성 함수. 지원서 접수 흐름이
+    SES 발신 도메인), 그리고 에이전트가 제공하는 요약 생성 함수. 지원서 접수 흐름이
     그 함수를 호출하므로 <b>시그니처는 두 오너 간 인터페이스 PR로 합의</b>한다.
   </p>
 
@@ -106,7 +109,7 @@ permalink: /role-backend/
       </tr>
     </thead>
     <tbody>
-      <tr class="is-now">
+      <tr>
         <td class="tbl__wk"><b>W1</b><span>08. 24. ~ 28.</span></td>
         <td>선행 해소</td>
         <td>앱 뼈대 &middot; ERD 확정 &middot; 인증 &middot; 공고 &middot; 지원서 제출 &middot;
@@ -141,7 +144,7 @@ permalink: /role-backend/
         <td>API 테스트 &middot; 통합 버그픽스 &middot; 에이전트 도구용 엔드포인트 보강</td>
         <td>테스트가 30초 내 전부 통과하고 CI에서 돈다. QA 시나리오 백엔드 항목 전부 통과</td>
       </tr>
-      <tr>
+      <tr class="is-now">
         <td class="tbl__wk"><b>버퍼</b><span>09. 28. ~ 30.</span></td>
         <td>동결</td>
         <td>코드 프리즈 &middot; 잔여 버그</td>
@@ -157,9 +160,12 @@ permalink: /role-backend/
 
   <h2><span class="role__num">5.</span> 진행 현황</h2>
   <p class="role__note">
-    2026. 08. 26. 기준. 작업 큐 22건 중 <b>20건 완료</b>, 1건 승인 대기.
-    M1 코어 &middot; M2 메일 &middot; M3 성능 &middot; 마감일까지 일정을 크게 앞질렀다.
-    남은 API 테스트 1건은 전환기 분담으로 에이전트 담당자 몫이다.
+    2026. 09. 22. 기준. <b>작업 큐 22건이 전부 닫혔다.</b> M1 코어 &middot; M2 전환 &middot; 파일
+    &middot; 메일 &middot; M3 성능까지 일정을 크게 앞질렀고, 마지막까지 남아 있던 API 테스트도
+    <b>pytest 1,165건이 CI에서 통과</b>한다. <b>승인 대기라는 상태는 없다</b> &mdash;
+    2026. 08. 28. 리뷰 게이트 폐지와 09. 04. 자체 머지 전환으로, CI가 초록이면 오너가 자기 PR을
+    자기가 머지한다. 지금 무게는 로드맵 W1~W5에 없던 확장분(실시간 AI 면접 &middot; 회사 통합 API)의
+    구멍 메우기와 09. 28. ~ 30. 코드 프리즈 전 잔여 목록에 있다.
   </p>
 
   <div class="items">
@@ -226,7 +232,8 @@ permalink: /role-backend/
     <tbody>
       <tr>
         <td><b>1인 절대량</b><br><span class="stat__k">큐 22건</span></td>
-        <td>완충 셋을 뒀다. ① 전환기 분담 6건을 에이전트 &middot; 앱 담당자가 나눠 맡는다
+        <td>완충 셋을 뒀다. ① 전환기 분담 6건을 인프라(총괄) 담당자와 앱 담당자가
+            셋씩 나눠 맡았다
             ② 공고 API 실측 판정 &mdash; 예상보다 오래 걸리면 권장 항목부터 다음 주로 강등
             ③ 권장 항목은 필수 항목보다 항상 뒤.</td>
       </tr>
@@ -236,8 +243,11 @@ permalink: /role-backend/
             <b>콘솔 출력 발송자로 폴백</b>해 워커 로직만 먼저 검증한다.</td>
       </tr>
       <tr>
-        <td><b>ERD 확정 지연</b></td>
-        <td>목업 머지가 선행이다. 인프라 M1의 확정 앞당김 결정에 묶여 있다.</td>
+        <td><b>ERD 확정 지연</b><br><span class="stat__k">해소</span></td>
+        <td>W1 리스크였다 &mdash; 목업 머지가 선행이었고, W1 안에 확정됐다. 그 뒤로는
+            <b>이 도메인이 코드와 같은 커밋에서 ERD를 직접 갱신한다</b> &mdash; 남의 확정을
+            기다리는 항목이 아니다. 지금은 <b>v2.8</b>(2026. 09. 17.)이고 alembic 리비전
+            26개가 따라붙어 있다.</td>
       </tr>
     </tbody>
   </table>

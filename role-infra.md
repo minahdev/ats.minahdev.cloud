@@ -13,7 +13,7 @@ permalink: /role-infra/
      인프라 &middot; 총괄</p>
   <h1>인프라 &middot; 총괄 &middot; 담당 진수택</h1>
   <p>전원이 딛는 바닥 &mdash; AWS &middot; 자동 CD &middot; CI와 스키마 이행 &middot; 통합
-     &middot; 최종 갱신 2026. 09. 22.</p>
+     &middot; 최종 갱신 2026. 09. 29.</p>
 </div>
 
 <div class="role__stat">
@@ -34,8 +34,10 @@ permalink: /role-infra/
   <h2><span class="role__num">1.</span> 미션</h2>
 
   <p class="role__p">
-    전원이 딛는 바닥이다. AWS &middot; 배포 &middot; CI/CD를 책임지고, 총괄로서 스키마 &middot; 아키텍처
-    &middot; 인터페이스 리뷰 &middot; 통합 &middot; 발표를 잡는다.
+    전원이 딛는 바닥이다. AWS &middot; 배포 &middot; CI/CD와 스키마 이행을 책임지고, 총괄로서
+    마일스톤 &middot; 범위 합의 &middot; 서버 자원과 비용 &middot; 통합 &middot; 발표를 잡는다.
+    <b>총괄은 리뷰 게이트가 아니다</b> &mdash; 도메인 안의 판단과 머지는 08. 28. 리뷰 게이트 폐지
+    이후 각 오너 몫이다.
   </p>
   <p class="role__p">
     이 도메인은 <b>다른 어떤 도메인에도 의존하지 않는다.</b> 그래서 반대로 <b>전부의 선행 조건</b>이
@@ -54,23 +56,32 @@ permalink: /role-infra/
     <div class="scope__box scope__box--in">
       <h3>도메인 업무</h3>
       <ul>
-        <li>AWS &mdash; 계정 &middot; IAM 최소 권한 &middot; S3 버킷 &middot; SES 발신 도메인(샌드박스 해제)
-            &middot; SQS 큐 &middot; EC2 배포</li>
+        <li>AWS &mdash; 계정 &middot; IAM 최소 권한 &middot; S3 버킷 &middot; EC2 배포.
+            W1~W2에 세운 SES &middot; SQS는 예산 만료(10. 27.) 대비로 물러났다(ADR-0031 &middot; 0036)</li>
         <li>로컬 실행 환경 &mdash; Docker Compose (API &middot; DB &middot; 워커)</li>
         <li>CI/CD &mdash; GitHub Actions (테스트 &middot; 프론트 빌드 &rarr; EC2 배포)</li>
-        <li>GitHub 설정 &mdash; 브랜치 보호 &middot; 코드 소유자 &middot; 리포 권한</li>
+        <li>GitHub 설정 &mdash; 브랜치 보호 &middot; 코드 소유자 &middot; 리포 권한.
+            09. 04. 부터 브랜치 보호가 main 직접 push를 실제로 막는다</li>
         <li>Vercel 프로젝트 연결 (빌드 설정은 프론트와 협업)</li>
-        <li>공용 문서 &middot; 스키마 관리 &mdash; 확정과 변경 절차 집행</li>
+        <li>스키마 이행 &mdash; alembic 리비전이 자동 CD의 <code>upgrade head</code>로 따라오게 한다.
+            ERD &middot; API 문서 갱신은 <b>각 오너가 코드와 같은 커밋에서 직접</b> 하고 사후 공지한다</li>
       </ul>
     </div>
 
     <div class="scope__box scope__box--out">
       <h3>총괄 업무 (도메인 밖 상시)</h3>
       <ul>
-        <li>인터페이스 PR 리뷰 &middot; 머지 &mdash; 기본 금요일 주 1회 일괄</li>
-        <li>다른 도메인이 <b>대기 중인 선행 PR은 수시 처리</b> &mdash; 밀리면 받는 쪽이 일주일을 논다</li>
+        <li>인터페이스 합의는 <b>두 오너 사이의 PR로 처리</b>한다 &mdash; 팀장은 머지 주체가 아니다.
+            CI가 초록이면 오너가 스스로 머지한다(09. 04. 개정)</li>
+        <li>주간 다이제스트 &mdash; 금요일에 그 주 변경 요약과 칸반 done 열을 훑는다.
+            <b>검수가 아니라 파악용</b>이라 여기 걸리기를 기다릴 PR은 없다</li>
+        <li>마일스톤 &middot; 범위 합의 &mdash; 도메인 안 판단은 오너 자율이고, 범위 자체가 움직일 때만
+            조율한다. 다른 도메인이 <b>대기 중인 의존</b>은 팀 채널에서 우선순위를 다시 잡는다
+            &mdash; 밀리면 받는 쪽이 일주일을 논다</li>
+        <li>서버 자원 &middot; 비용 &mdash; 예산 $400 &middot; 10. 27. 까지(GPU 포함)</li>
         <li>주간 계획서 &mdash; 주 마감 게이트 &middot; 충돌 방지</li>
-        <li>도메인 간 조정 &middot; 통합 리허설 &middot; 발표 총괄</li>
+        <li>도메인 간 조정 &middot; 통합 리허설 &middot; 발표 총괄(원고 프레이밍 통일)
+            &middot; 게이트 판정(09. 04. 초기 버전 &middot; 09. 30. 1차 완성)</li>
       </ul>
     </div>
 
@@ -117,7 +128,7 @@ permalink: /role-infra/
       </tr>
     </thead>
     <tbody>
-      <tr class="is-now">
+      <tr>
         <td class="tbl__wk"><b>W1</b><span>08. 24. ~ 28.</span></td>
         <td>M1 선행조건 풀기</td>
         <td>AWS 계정 &middot; S3 &middot; SES 발신 도메인 신청 &middot; 앱 뼈대 머지 &middot; 목업 머지
@@ -156,7 +167,7 @@ permalink: /role-infra/
         <td>QA 시나리오 전 항목 통합 리허설 &middot; 데모 환경 동결 &middot; 발표용 역할표 최종 확정</td>
         <td>데모 시나리오가 프로덕션 URL과 실기기에서 끊김 없이 돈다. 리허설 2회</td>
       </tr>
-      <tr>
+      <tr class="is-now">
         <td class="tbl__wk"><b>버퍼</b><span>09. 28. ~ 30.</span></td>
         <td>1차 완성 판정</td>
         <td>잔여 버그 뒷처리 &middot; 발표 자료 총괄 착수</td>
@@ -179,14 +190,20 @@ permalink: /role-infra/
     </thead>
     <tbody>
       <tr>
-        <td><b>팀장 병목의 재생산</b></td>
-        <td>도메인 오너제의 목적 자체가 이것을 없애는 것이다. 금요일 사이클에 인터페이스 PR이 몰리면
-            의존 작업이 최대 1주 대기한다. 팀원은 <b>목요일까지</b> 올리고, 다른 도메인을 대기시키는
-            PR은 수시 검수를 요청한다. 그래도 밀리면 그 주 계획서에 원인을 적는다.</td>
+        <td><b>자체 머지가 깨진 main을 만든다</b></td>
+        <td>팀장 병목은 도메인 오너제(08. 24.)와 리뷰 게이트 폐지(08. 28.)로 없앴고, 09. 04. 부터는
+            승인 없이 자기 PR을 자기가 머지한다. 그래서 <b>"main은 항상 동작한다"는 책임이 리뷰어에서
+            머지하는 사람에게 넘어왔다.</b> 남은 안전망은 <b>CI 빨간불 = 머지 불가</b> 하나이고,
+            main 머지는 2분 뒤 프로덕션이라 깨진 main은 묻지 않고 고치거나(fix-forward) revert한다.</td>
       </tr>
       <tr>
-        <td><b>SES 샌드박스 해제 지연</b></td>
-        <td>신청을 W1 첫날에 걸고, 해제 전에는 검증된 수신자(팀원 메일)로만 발송을 테스트한다.</td>
+        <td><b>메일 발송 &mdash; SES에서 물러났다</b></td>
+        <td>W1에 걸어둔 신청은 08. 27. 한 번 거절돼 검증된 수신자(팀원 메일)로만 테스트했고,
+            재신청이 <b>09. 01. 프로덕션 승인</b>(5만 통/일)으로 풀렸다. 그래도 예산 만료(10. 27.)
+            뒤에도 서비스가 돌아야 해서 <b>SES 경로 자체를 접었다</b>(ADR-0031). 09. 08. 부터
+            <code>MAIL_DISPATCH=n8n</code>이 기본이고 n8n이 팀 지메일 SMTP로 실발송하며,
+            놀고 있던 SQS 메일 워커는 09. 14. 폐기했다(ADR-0036). 남은 리스크는 SES 해제가 아니라
+            <b>발송 담당이 한 곳으로 좁아진 것</b>이라, n8n이 멈추면 API가 5분마다 SMTP로 재발송한다.</td>
       </tr>
       <tr>
         <td><b>ERD 확정이 늦으면 전 도메인 대기</b></td>

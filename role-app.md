@@ -9,11 +9,11 @@ permalink: /role-app/
 <div class="role">
 
 <div class="role__head">
-  <p class="role__crumb"><a href="{{ '/toc/' | relative_url }}">목차</a> &rsaquo;
-     팀 구성 및 역할 &rsaquo; 앱 (모바일)</p>
+  <p class="role__crumb"><a href="{{ '/team/' | relative_url }}">팀 구성 및 역할</a> &rsaquo;
+     앱 (모바일)</p>
   <h1>앱 (모바일) &middot; 담당 김민아</h1>
-  <p>담당자 &middot; 면접관용 모바일 네이티브 앱 &mdash; 웹과 같은 API를 쓰는 두 번째 클라이언트
-     &middot; 최종 갱신 2026. 09. 22.</p>
+  <p>담당자 &middot; 면접관용 모바일 네이티브 앱 &mdash; 웹과 같은 API를 쓰는 두 번째 클라이언트.
+     2026. 09. 08.부터 지원자 갈래까지 한 앱에 들어 있다 &middot; 최종 갱신 2026. 09. 29.</p>
 </div>
 
 <div class="role__stat">
@@ -25,6 +25,8 @@ permalink: /role-app/
     <span class="stat__v">Flutter<small>Dart</small></span></div>
   <div class="stat"><span class="stat__k">대상 플랫폼</span>
     <span class="stat__v">Android<small>전용</small></span></div>
+  <div class="stat"><span class="stat__k">화면</span>
+    <span class="stat__v">23<small>장</small></span></div>
   <div class="stat"><span class="stat__k">1차 완성</span>
     <span class="stat__v">09. 30.<small>수</small></span></div>
 </div>
@@ -42,6 +44,12 @@ permalink: /role-app/
   <p class="role__p">
     앱은 API를 <b>소비만 하고 제공하지 않는다.</b> 다른 파트에 대한 의존은 백엔드 API 전부이지만,
     반대로 앱이 실패해도 다른 파트가 멈추지 않는다 &mdash; 시스템에서 격리 수준이 가장 높은 트랙이다.
+  </p>
+  <p class="role__p">
+    2026. 09. 08.부터 <b>한 앱을 담당자와 지원자가 같이 쓴다.</b> 지원자 화면은 탭 셸 밖에 따로
+    두어 담당자 UI를 한 조각도 보여 주지 않고, 지원자는 지원할 때 쓴 이메일로 <b>담당자와 별개인
+    지원자 전용 토큰</b>을 받는다. 지원 현황 &middot; AI 면접 &middot; 실시간 면접 &middot;
+    인적성 검사 &middot; 면접 시간 조율이 그 갈래에 들어 있다.
   </p>
 
 </div>
@@ -106,19 +114,38 @@ permalink: /role-app/
 <div class="role__sec">
 
   <h2><span class="role__num">3.</span> 개발 범위</h2>
+  <p class="role__note">
+    처음 범위는 로그인 &middot; 공고 리스트 &middot; 지원자 리스트 &middot; 지원자 상세 &middot;
+    단계 변경 &middot; 평가 작성 &middot; 이력서 열람 7개였다.
+    2026. 09. 01.에 웹이 사이드바 6개로 커지면서 앱도 그 화면 지도를 따라갔고,
+    09. 08.부터 지원자 갈래가 더 붙어 <b>지금은 화면 23장</b>이다.
+  </p>
 
   <div class="scope">
 
     <div class="scope__box scope__box--in">
       <h3>포함</h3>
       <ul>
-        <li>로그인 (JWT)</li>
-        <li>공고 리스트</li>
+        <li>로그인 (JWT) &mdash; 토큰은 보안 저장소에 둔다</li>
+        <li>하단 탭바 5칸 &mdash; 공고 &middot; 지원자 &middot; 홈 &middot; 캘린더 &middot; 더보기</li>
+        <li>대시보드(홈) &mdash; 폰은 위에서부터 읽으므로 급한 순으로 다시 세웠다</li>
+        <li>공고 리스트 + <b>공고 등록 &middot; 수정 &middot; 삭제</b> &mdash; 웹은 마감 &middot;
+            다시 열기만 있어, 공고를 만들고 고치고 지우는 곳은 앱뿐이다</li>
         <li>지원자 리스트 &mdash; 단계 탭 필터 + 압축 퍼널 바</li>
-        <li>지원자 상세 &mdash; 지원 정보 &middot; 단계 이력 타임라인 &middot; 평가 목록</li>
-        <li><b>단계 변경 버튼</b> (드래그 대신)</li>
-        <li>평가 작성</li>
+        <li>전 공고 통합 검색 &mdash; 테이블 대신 카드형 + [더 보기]</li>
+        <li>지원자 상세 &mdash; 지원 정보 &middot; 아르의 요약 &middot; 메일 이력 &middot; 메모.
+            단계 이력 타임라인 &middot; 평가 목록은 별도 화면</li>
+        <li><b>단계 변경 버튼</b> (드래그 대신, 확인 시트 한 번)</li>
+        <li>평가 작성 &mdash; 중복은 앱이 막고, 내가 쓴 것은 고친다</li>
         <li>이력서 열람 (presigned URL)</li>
+        <li>캘린더 &mdash; 월 그리드 없이 주간 스트립 + 그날 목록</li>
+        <li>메일 발송 &mdash; 프리셋 &rarr; 프리필 &rarr; 확인 3단계. 치환은 서버가 한다</li>
+        <li>더보기 &middot; 설정 &mdash; 내 계정 탭(이름 &middot; 비밀번호)만 잠금이 풀렸다</li>
+        <li><b>아르</b>(에이전트) &mdash; 전체 화면 시트. 쓰기는 앰버 점선 확인 카드를
+            사람이 눌러야 돈다</li>
+        <li><b>지원자 갈래</b> (09. 08.) &mdash; 지원자 로그인 &middot; 지원 현황 &middot;
+            AI 면접 &middot; 실시간 면접(WebRTC) &middot; 인적성 검사 &middot; 면접 시간 조율
+            &middot; 내 정보</li>
       </ul>
     </div>
 
@@ -127,7 +154,12 @@ permalink: /role-app/
       <ul>
         <li>지원 폼 &mdash; 지원자용 외부 링크는 웹 전용</li>
         <li>칸반 &mdash; 모바일 금지 원칙</li>
+        <li>평가 현황(평가 대기 큐) &mdash; 09. 01.에 만들었으나 09. 15.에 웹과 맞춰 지웠다.
+            평가는 지원자 상세에서 남긴다 &mdash; 같은 일을 하는 자리가 둘이면 어느 쪽이
+            진짜인지 갈린다</li>
         <li>앱 내 푸시 알림 &mdash; 여유 시 별도 합의</li>
+        <li>팀 기기 전원 APK 배포 &mdash; 09. 02.에 계획에서 뺐다.
+            APK는 필요할 때 뽑아 전달하면 된다</li>
         <li>스토어 배포 &mdash; 데모는 Android APK 직접 전달</li>
         <li>iOS 실기기 시연 &mdash; Mac 부재로 빌드 불가</li>
       </ul>
@@ -178,7 +210,7 @@ permalink: /role-app/
       </tr>
     </thead>
     <tbody>
-      <tr class="is-now">
+      <tr>
         <td class="tbl__wk"><b>W1</b><span>08. 24. ~ 28.</span></td>
         <td>전환기 + 뼈대 선행</td>
         <td>공고 CRUD &middot; 지원자 API &middot; 담당자 직접 등록 &middot; 스택 확정 &middot;
@@ -190,33 +222,45 @@ permalink: /role-app/
         <td class="tbl__wk"><b>W2</b><span>08. 31. ~ 09. 04.</span></td>
         <td>M1 뼈대</td>
         <td>당초 계획(프로젝트 생성 &middot; 토큰 이식 &middot; 내비게이션)은 W1에 완료.
-            남은 것은 팀 Android 기기 전원 APK 설치 확인과 목데이터 화면 착수</td>
-        <td>Android 실기기 구동 확인 &mdash; 정적 분석 무경고, 테스트 통과.
-            <span class="tag tag--miss">기기 전원 설치 확인 미완</span></td>
+            남은 것은 목데이터 화면 착수</td>
+        <td><span class="tag tag--done">완료</span> Android 실기기 구동 확인 &mdash; 정적 분석
+            무경고, 테스트 통과. 09. 01. 릴리스 APK를 뽑아 전달했다(서명은 debug 키 &mdash;
+            스토어 배포가 아니라 직접 설치다). 기기 전원 설치 확인은
+            <b>09. 02.에 계획에서 뺐다.</b></td>
       </tr>
       <tr>
         <td class="tbl__wk"><b>W3</b><span>09. 07. ~ 11.</span></td>
         <td>M1 정적 화면</td>
-        <td>목데이터로 지원자 리스트 &middot; 상세 &middot; 로그인 화면</td>
-        <td>모바일 목업과 나란히 놓고 같은 제품으로 보인다. 목데이터 필드명이 ERD와 일치한다.</td>
+        <td>목데이터로 지원자 리스트 &middot; 상세 &middot; 로그인 화면 &middot;
+            <b>(09. 01. 앞당김)</b> 하단 탭바 + 대시보드 &middot; 캘린더 &middot; 통합 검색
+            &middot; 더보기 &middot; 평가 현황 &middot; 설정</td>
+        <td><span class="tag tag--done">완료</span> 09. 01. 모바일 목업 &middot; 시안과 나란히 놓고
+            같은 제품으로 보이고, 목데이터 필드명이 ERD와 일치한다. 정적 분석 무경고 &middot;
+            테스트 175개 통과 &middot; 실기기 확인.
+            <b>W4 예정이던 로딩 &middot; 빈 &middot; 오류 3종도 여기서 선행했다.</b></td>
       </tr>
       <tr>
         <td class="tbl__wk"><b>W4</b><span>09. 14. ~ 18.</span></td>
         <td>M2 API 연동</td>
         <td>JWT 로그인 &middot; 공고 &middot; 지원자 실데이터 &middot; <b>단계 변경</b> &middot;
-            평가 작성 &middot; 로딩 &middot; 빈 상태 &middot; 오류 3종</td>
-        <td>앱에서 단계를 바꾸면 <b>웹 칸반에 반영된다</b>(같은 API 증명).
-            면접관 계정은 배정된 지원자만 보인다.</td>
+            평가 작성 &middot; 메일 발송 &middot; 아르 (3종은 W3에서 선행)</td>
+        <td><span class="tag tag--done">완료</span> JWT 로그인 09. 02. &middot; 단계 변경 저장
+            09. 02. &middot; 나머지 연동 09. 03. 앱에서 단계를 바꾸면
+            <b>웹 칸반에 반영된다</b>(같은 API 증명). 당초 완료 기준이던 "면접관 계정은 배정된
+            지원자만 보인다"는 <b>ADR-0017(08. 31.)로 폐지됐다</b> &mdash; 로그인하면 전부
+            조회하고 역할은 <code>admin</code> &middot; <code>member</code> 2종이라,
+            앱은 역할별 화면 분기를 만들지 않는다. 남은 제한은 <code>member</code>의
+            평가 작성(배정된 건만)뿐이고, <code>admin</code>은 그마저 없다.</td>
       </tr>
       <tr>
         <td class="tbl__wk"><b>W5</b><span>09. 21. ~ 25.</span></td>
         <td>M3 마감 &middot; 데모</td>
-        <td>이력서 열람 &middot; 극단값 점검(긴 이름 &middot; 태그 다수 &middot; 자소서 5천 자)
-            &middot; 오프라인 안내 &middot; 데모 시나리오</td>
-        <td>팀 Android 기기 전원에서 APK로 구동. 데모 시나리오(출근길 서류 검토 &rarr; 단계 변경
+        <td>극단값 점검(긴 이름 &middot; 태그 다수 &middot; 자소서 5천 자) &middot; 오프라인 안내
+            &middot; 데모 시나리오 &mdash; <b>이력서 열람은 09. 03.에 끝냈다</b></td>
+        <td><b>데모에 쓸 기기</b>에서 APK로 구동. 데모 시나리오(출근길 서류 검토 &rarr; 단계 변경
             &rarr; 메일 자동 발송 수신)가 끊김 없이 돈다.</td>
       </tr>
-      <tr>
+      <tr class="is-now">
         <td class="tbl__wk"><b>버퍼</b><span>09. 28. ~ 30.</span></td>
         <td>동결</td>
         <td>데모 동결 &middot; (여유 시) 내부 테스트 트랙 배포</td>
@@ -226,6 +270,15 @@ permalink: /role-app/
   </table>
   </div>
 
+  <p class="role__note" style="margin-top:1.1rem; margin-bottom:0;">
+    <b>M1&ndash;M3은 계획보다 앞서 끝났다</b> &mdash; 뼈대 08. 26. &middot; 정적 화면 09. 01.
+    &middot; API 연동 09. 03. 그래서 09. 07. 이후의 실제 작업은 주간 계획에 없던 확장과
+    재설계다: 다크 팔레트 이식과 대시보드 현황판(09. 07.) &middot; 지원자 갈래와
+    AI 면접(09. 08. ~ 09.) &middot; 실시간 면접 WebRTC(09. 09. ~ 10.) &middot; 인적성 검사
+    &middot; 면접 시간 조율 &middot; 지원자 홈 재설계 &middot; 비밀번호 로그인(09. 15. ~ 16.)
+    &middot; 캘린더와 담당자 홈 재설계(09. 16.). 확장은 ADR로 편입해 같은 방식으로 이어 갔다.
+  </p>
+
 </div>
 
 <div class="role__sec">
@@ -234,7 +287,8 @@ permalink: /role-app/
   <p class="role__note">
     위에서부터 순서대로 소화한다. 선행이 풀리지 않았으면 건너뛰고 다음 것을 잡는다.
     전환기 1&ndash;3번은 <b>앱 자신의 선행 조건(지원자 API)을 본인 손으로 푸는 구조</b>였다 &mdash;
-    순서를 지킨 덕분에 대기 시간이 없었다.
+    순서를 지킨 덕분에 대기 시간이 없었다. 8번까지가 원래 큐이고, 9번 이후는 계획에 없던
+    확장이다.
   </p>
 
   <div class="tbl__scroll">
@@ -268,18 +322,51 @@ permalink: /role-app/
         <td>5</td><td>Flutter 프로젝트 생성 + 토큰 이식 + 내비게이션 뼈대</td><td>4번</td>
         <td><span class="tag tag--done">완료</span> 08. 26.</td>
       </tr>
-      <tr>
-        <td>6</td><td>지원자 리스트 &middot; 상세 &middot; 로그인 (목데이터)</td><td>5번</td>
-        <td><span class="tag tag--now">다음 작업</span></td>
+      <tr class="is-done">
+        <td>6</td>
+        <td>지원자 리스트 &middot; 상세 &middot; 로그인 &middot; 공고 리스트 (목데이터)
+            + 모바일 시안 반영</td>
+        <td>5번</td>
+        <td><span class="tag tag--done">완료</span> 08. 28.</td>
       </tr>
-      <tr>
-        <td>7</td><td>JWT 로그인 연동</td><td>백엔드 인증</td>
-        <td><span class="tag tag--wait">대기</span></td>
+      <tr class="is-done">
+        <td>6.5</td>
+        <td>앱 UI 초안 반영 &mdash; 하단 탭바 &middot; 대시보드 &middot; 캘린더 &middot;
+            통합 검색 &middot; 더보기 &middot; 평가 현황 &middot; 설정 + 로딩 &middot; 빈 &middot;
+            오류 3종</td>
+        <td>6번</td>
+        <td><span class="tag tag--done">완료</span> 09. 01.</td>
       </tr>
-      <tr>
-        <td>8</td><td>리스트 &middot; 상세 &middot; 단계 변경 &middot; 평가 연동</td>
+      <tr class="is-done">
+        <td>7</td><td>JWT 로그인 연동 &mdash; 앱에 처음으로 네트워크가 생겼다</td><td>백엔드 인증</td>
+        <td><span class="tag tag--done">완료</span> 09. 02.</td>
+      </tr>
+      <tr class="is-done">
+        <td>8</td>
+        <td>리스트 &middot; 상세 &middot; 단계 변경 &middot; 평가 &middot; 메일 &middot;
+            공고 등록/수정 &middot; 이력서 열기 &middot; 캘린더 &middot; 아르 연동 &mdash;
+            <b>목데이터로 남은 화면이 없다</b></td>
         <td>백엔드 M1 &middot; M2</td>
-        <td><span class="tag tag--wait">대기</span></td>
+        <td><span class="tag tag--done">완료</span> 09. 03.</td>
+      </tr>
+      <tr class="is-done">
+        <td>9</td>
+        <td>지원자 갈래 &mdash; 지원자 로그인 &middot; 지원 현황 &middot; AI 면접 (ADR-0033)</td>
+        <td>8번</td>
+        <td><span class="tag tag--done">완료</span> 09. 08. ~ 09.</td>
+      </tr>
+      <tr class="is-done">
+        <td>10</td>
+        <td>실시간 면접(WebRTC) 지원자 자리 &mdash; 담당자 웹과 1:1로 얼굴을 마주 본다</td>
+        <td>9번</td>
+        <td><span class="tag tag--done">완료</span> 09. 09. ~ 10.</td>
+      </tr>
+      <tr class="is-done">
+        <td>11</td>
+        <td>인적성 검사 &middot; 면접 시간 조율 &middot; 내 정보 &middot;
+            지원자 비밀번호 로그인 (ADR-0033 개정)</td>
+        <td>9번</td>
+        <td><span class="tag tag--done">완료</span> 09. 15. ~ 16.</td>
       </tr>
     </tbody>
   </table>
@@ -291,7 +378,9 @@ permalink: /role-app/
 
   <h2><span class="role__num">7.</span> 진행 중 해소한 쟁점</h2>
   <p class="role__note">
-    막힌 지점을 혼자 우회하지 않고 팀 규칙에 따라 확인받아 처리한 항목이다.
+    막힌 지점을 혼자 우회하지 않고 처리한 항목이다. 셋 다 08월 말 일이고, 그때는 공용 파일 수정과
+    판단 변경에 사전 확인이 필요했다 &mdash; <b>2026. 08. 28.에 리뷰 &middot; 사전 확인 게이트가
+    폐지되면서</b> 지금은 같은 일을 오너가 직접 고치고 사후에 한 줄 공지한다.
   </p>
 
   <div class="items">
@@ -300,8 +389,10 @@ permalink: /role-app/
       <p class="item__t">수정 금지 파일에 필요한 관계 정의가 없었다 <span class="tag tag--done">해소 08. 25.</span></p>
       <p class="item__d">
         지원자 상세 API 작업에 모델 간 관계 정의가 필요했는데 공용 모델 파일에 하나도 없었다.
-        해당 파일은 <b>공용 파일이라 임의 수정이 금지</b>돼 있어, 직접 고치지 않고 팀 채널에
+        해당 파일은 당시 <b>공용 파일이라 임의 수정이 금지</b>돼 있어, 직접 고치지 않고 팀 채널에
         확인을 요청했다. 팀장이 자식 관계 4종을 추가해 해결한 뒤 원래 지시대로 진행했다.
+        <b>지금이라면 직접 고친다</b> &mdash; 공용 파일도 오너가 손대고, 코드와 같은 커밋에서
+        문서를 갱신한 뒤 팀 채널에 사후 한 줄을 남기는 것이 현재 규칙이다.
       </p>
     </div>
 
@@ -312,6 +403,8 @@ permalink: /role-app/
         인증이 들어오면서 전제가 사라진 상태였다. API 문서가 이 엔드포인트를 담당자 이상 권한으로
         규정하고 있어 <b>API 문서를 기준으로 삼기로</b> 확인받고 권한 검사를 적용했다.
         기록용 필드도 <code>TODO</code>로 남기지 않고 실제 담당자로 채웠다.
+        이후 <b>ADR-0017(08. 31.)로 그 권한 등급 자체가 없어져</b> 지금은 로그인한 사람이면
+        누구나 호출한다 &mdash; 기록용 필드를 실제 담당자로 채운 것만 그대로 남았다.
       </p>
     </div>
 
@@ -353,8 +446,9 @@ permalink: /role-app/
       </tr>
       <tr>
         <td><b>개인 기기 &middot; 개발 환경 편차</b></td>
-        <td>팀 Android 기기 전원에 APK 설치를 먼저 확인하고, 안 되는 기기는 데모 대상에서 뺀다.
-            즉시 반영 수단이 없으므로 <b>배포 확인을 주 1회로 정기화</b>한다.</td>
+        <td>데모에 쓸 Android 기기에 APK 설치를 먼저 확인하고, 안 되는 기기는 데모 대상에서 뺀다.
+            <b>기기 전원 설치 확인을 마일스톤으로 두는 것은 09. 02.에 뺐다</b> &mdash; APK는
+            필요할 때 뽑아 전달하면 되고, 기기마다 설치를 확인하는 것 자체가 목표일 이유가 없었다.</td>
       </tr>
       <tr>
         <td><b>웹과 룩이 어긋남</b></td>
@@ -392,6 +486,6 @@ permalink: /role-app/
 
 </div>
 
-<a class="role__back" href="{{ '/toc/' | relative_url }}">&larr; 목차</a>
+<a class="role__back" href="{{ '/team/' | relative_url }}">&larr; 팀 구성 및 역할</a>
 
 </div>

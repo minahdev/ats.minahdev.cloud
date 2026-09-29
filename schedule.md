@@ -102,9 +102,9 @@ permalink: /schedule/
 .kanban__scroll { overflow-x: auto; padding-bottom: .5rem; }
 .kanban {
   display: grid;
-  grid-template-columns: repeat(5, minmax(12rem, 1fr));
+  grid-template-columns: repeat(4, minmax(12rem, 1fr));
   gap: .75rem;
-  min-width: 60rem;
+  min-width: 48rem;
 }
 .col { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; padding: .7rem .6rem; }
 .col__head {
@@ -171,7 +171,7 @@ permalink: /schedule/
   <h1>개발 일정 및 추진 체계</h1>
   <p>AI 기반 채용 프로세스 자동화 및 지원자 통합 관리 플랫폼 &middot;
      도메인 오너제 / 주 단위 자율 진행 &middot; 담당은 09. 04. 재배치 기준
-     &middot; 최종 갱신 2026. 09. 22.</p>
+     &middot; 최종 갱신 2026. 09. 29.</p>
 </div>
 
 <div class="sch__sec">
@@ -301,20 +301,21 @@ permalink: /schedule/
     도메인 오너제에서는 각자 자기 큐를 위에서부터 소화하므로,
     <b>진행 중 컬럼은 도메인당 1건</b>을 넘지 않는 것을 원칙으로 한다.
     완료 컬럼은 주요 항목만 표시했다.
+    <br><b>승인 대기 컬럼은 없다</b> &mdash; 08. 28. 개정으로 사람 승인 게이트가 사라졌고(그 시점에는 전원 main 직접 push),
+    09. 04.부터는 main에 닿는 경로가 PR 하나로 좁혀졌지만 <b>CI가 초록이면 오너가 승인 없이 스스로 머지한다.</b>
+    어느 쪽이든 카드가 남의 판정을 기다리며 멈추는 칸은 생기지 않는다.
   </p>
 
   <div class="kanban__scroll">
   <div class="kanban">
 
     <div class="col">
-      <p class="col__head">백로그 <span class="col__count">10</span></p>
+      <p class="col__head">백로그 <span class="col__count">9</span></p>
 
       <div class="card">CI/CD 파이프라인 자동화
         <span class="card__meta"><span class="who who-e">수택 E</span><span class="card__wk">W3</span></span></div>
       <div class="card">중간 통합 점검 · 통합 리허설
         <span class="card__meta"><span class="who who-e">수택 E</span><span class="card__wk">W4–5</span></span></div>
-      <div class="card">불합격 사유 · 일괄 단계 변경
-        <span class="card__meta"><span class="who who-b">우정 B</span><span class="card__wk">W3</span></span></div>
       <div class="card">화면 API 연동 (목데이터 제거)
         <span class="card__meta"><span class="who who-c">민아 C</span><span class="card__wk">W3</span></span></div>
       <div class="card">칸반 드래그 · 낙관적 업데이트 롤백
@@ -347,8 +348,10 @@ permalink: /schedule/
     </div>
 
     <div class="col">
-      <p class="col__head">진행 중 <span class="col__count">4</span></p>
+      <p class="col__head">진행 중 <span class="col__count">5</span></p>
 
+      <div class="card">불합격 사유 · 일괄 단계 변경 — PR 올림
+        <span class="card__meta"><span class="who who-b">우정 B</span><span class="card__wk">W1</span></span></div>
       <div class="card">SES 샌드박스 해제 · IAM 최소 권한
         <span class="card__meta"><span class="who who-e">수택 E</span><span class="card__wk">W1–2</span></span></div>
       <div class="card">React 뼈대 · 공통 컴포넌트
@@ -357,13 +360,6 @@ permalink: /schedule/
         <span class="card__meta"><span class="who who-c">민아 C</span><span class="card__wk">W1</span></span></div>
       <div class="card">확정안 기준 에이전트 목업 재작업
         <span class="card__meta"><span class="who who-d">소연 D</span><span class="card__wk">W1–2</span></span></div>
-    </div>
-
-    <div class="col">
-      <p class="col__head">리뷰 / 승인 대기 <span class="col__count">1</span></p>
-
-      <div class="card">불합격 사유 + 일괄 단계 변경 — 팀장 승인 대기
-        <span class="card__meta"><span class="who who-b">우정 B</span><span class="card__wk">W1</span></span></div>
     </div>
 
     <div class="col col--done">
@@ -399,7 +395,8 @@ permalink: /schedule/
 
   <h2><span class="sch__num">4.</span> 조직 구성 및 역할 분담</h2>
   <p class="sch__note">
-    사람마다 도메인 하나를 소유한다. 소유 폴더 밖은 자기 것이 아니고,
+    도메인마다 오너가 한 명이다 &mdash; 09. 04. 재배치로 <b>김민아가 프론트엔드와 앱을 겸임</b>해
+    4명이 5개 도메인을 나눈다. 소유 폴더 밖은 자기 것이 아니고,
     자기 도메인의 로드맵이 자기 작업의 기준이다.
     각자의 범위 &middot; 마일스톤 &middot; 리스크는
     <a href="{{ '/team/' | relative_url }}">팀 구성 및 역할</a> 페이지와 역할 상세에 있다.
@@ -466,6 +463,10 @@ permalink: /schedule/
     2026. 08. 24. <b>작업 풀 + 팀장 지시서 발행</b> 체계에서 <b>도메인 오너제</b>로 전환했다.
     리뷰가 팀장 한 명에게 몰려 다른 사람의 작업이 최대 일주일씩 대기하던 구조를 없애는 것이
     목적이었다.
+    <br>그 뒤 두 번 더 고쳤다 &mdash; 08. 28.에 <b>사람 리뷰 · 사전 확인 게이트를 전면 폐지</b>하고
+    사후 공지 체계로 바꿨고, 09. 04.에 main 직접 push를 막아
+    <b>브랜치 &rarr; PR &rarr; 자체 머지</b>(CI 초록 필수, 승인 불요)로 정리했다.
+    아래는 그 결과의 현재 리듬이다.
   </p>
 
   <div class="cere">
@@ -478,17 +479,18 @@ permalink: /schedule/
     </div>
 
     <div class="cere__item">
-      <h3>도메인 내부 PR</h3>
+      <h3>PR은 오너가 자체 머지</h3>
       <span class="cere__when">수시 · 셀프 머지</span>
-      <p>남의 폴더나 공용 파일이 안 섞였고, PR 본문에 검증 결과가 있고, CI가 초록이면
-         오너가 스스로 머지한다. 팀장 검수 사이클과 무관하게 돈다.</p>
+      <p>PR 본문에 검증 결과가 있고 CI가 초록이면 <b>승인 없이 오너가 스스로 머지한다.</b>
+         남의 폴더나 공용 파일이 섞였어도 커밋에 명시하고 사후 공지하면 되고,
+         머지를 막는 것은 CI뿐이다. 남의 도메인의 큰 변경만 직접 고치지 않고 이슈로 오너에게 넘긴다.</p>
     </div>
 
     <div class="cere__item">
-      <h3>팀장 검수 · 머지</h3>
-      <span class="cere__when">매주 금요일 최소 1회</span>
-      <p>스키마 · API 문서 · 공용 문서 · 도메인 경계를 넘는 PR이 대상이다.
-         금요일 검수에 걸리도록 <b>목요일까지</b> 올린다. 다른 도메인이 대기 중인 PR은 수시 요청.</p>
+      <h3>주간 다이제스트</h3>
+      <span class="cere__when">매주 금요일</span>
+      <p>그 주 변경 요약과 칸반 완료 열을 팀장이 훑는다. <b>검수가 아니라 파악용</b>이라
+         여기 걸리기를 기다릴 PR은 없다. 이견은 사후 커밋이나 revert로 처리한다.</p>
     </div>
 
     <div class="cere__item">
@@ -501,8 +503,8 @@ permalink: /schedule/
     <div class="cere__item">
       <h3>30분 룰</h3>
       <span class="cere__when">상시</span>
-      <p>30분 넘게 막히면 혼자 붙들지 말고 팀 채널에 묻는다. 1인 1도메인 구조에서는
-         혼자 오래 막히는 것이 가장 큰 지연 요인이다.</p>
+      <p>30분 넘게 막히면 혼자 붙들지 말고 팀 채널에 묻는다. 도메인마다 오너가 한 명인
+         구조에서 혼자 오래 막히는 것이 가장 큰 지연 요인이다.</p>
     </div>
 
     <div class="cere__item">
