@@ -1,0 +1,293 @@
+---
+---
+/* 보고서 셸 — 상단 바 · 좌측 문서 색인 · 본문 · 우측 「이 페이지 안에서」.
+   본문 페이지들은 각자 인라인 <style> 을 그대로 쓰므로 여기서는 셸만 그린다.
+   색 값은 디자인 시안 A(색인)에서 가져왔다. 흐린 회색(#9ca3af)은 대비 미달이라 쓰지 않는다. */
+
+:root {
+  --ink: #111827;
+  --body: #1f2937;
+  --sub: #374151;
+  --cap: #4b5563;       /* 흰 배경 7.0:1 */
+  --line: #e5e7eb;
+  --hair: #eef0f2;
+  --wash: #f9fafb;
+  --side: #f7f8fa;
+  --accent: #1d4ed8;    /* 흰 배경 6.3:1 */
+  --accent-deep: #1e3a8a;
+  --here-bg: #eaefff;
+  --chip: #d8e1ff;
+  --side-w: 288px;
+  --onpage-w: 232px;
+  --top-h: 56px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans KR", "Noto Sans KR", system-ui, sans-serif;
+  background: #fff;
+  color: var(--body);
+  word-break: keep-all;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); }
+a:hover { color: var(--accent-deep); }
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: #fff;
+  color: var(--ink);
+  padding: 10px 14px;
+  border: 1px solid var(--accent);
+  border-radius: 0 0 6px 0;
+  z-index: 100;
+}
+.skip:focus { left: 0; }
+
+:where(a, button, input):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* ── 상단 바 ─────────────────────────────── */
+
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  height: var(--top-h);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.top__brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  color: var(--accent);
+  flex: 0 0 auto;
+}
+.top__name { font-size: 15px; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
+.top__rule { width: 1px; height: 14px; background: var(--line); }
+.top__kind { font-size: 13px; color: var(--cap); }
+
+.top__drawer {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #d5d9df;
+  border-radius: 5px;
+  background: #fff;
+  color: var(--sub);
+  cursor: pointer;
+}
+
+.top__search { flex: 1; min-width: 0; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.top__search label { font-size: 12.5px; font-weight: 500; color: var(--sub); }
+.top__search .field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: min(372px, 100%);
+  height: 33px;
+  border: 1px solid #d5d9df;
+  border-radius: 5px;
+  padding: 0 7px 0 10px;
+  color: var(--cap);
+}
+.top__search .field:focus-within { border-color: var(--accent); }
+.top__search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font: 400 12.5px/1 "IBM Plex Sans KR", sans-serif;
+  color: var(--ink);
+}
+.kbd {
+  flex: 0 0 auto;
+  font: 500 10.5px/1 "IBM Plex Mono", monospace;
+  color: var(--cap);
+  background: #f3f4f6;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+
+.top__meta { display: flex; align-items: center; gap: 14px; flex: 0 0 auto; }
+.top__rev { font: 400 11.5px/1 "IBM Plex Mono", monospace; color: var(--cap); }
+.top__meta a { font-size: 12px; font-weight: 500; text-decoration: none; }
+.top__meta a:hover { text-decoration: underline; }
+
+/* ── 셸 ─────────────────────────────────── */
+
+.shell { display: flex; align-items: flex-start; }
+
+/* ── 좌측 문서 색인 ───────────────────────── */
+
+.side {
+  flex: 0 0 var(--side-w);
+  width: var(--side-w);
+  position: sticky;
+  top: var(--top-h);
+  height: calc(100vh - var(--top-h));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--side);
+  border-right: 1px solid var(--line);
+  padding: 16px 0 24px;
+}
+
+.side__head { display: flex; align-items: baseline; justify-content: space-between; padding: 0 18px 10px; }
+.side__k { font-size: 11px; font-weight: 600; letter-spacing: 0.15em; color: var(--cap); }
+.side__n { font: 400 10.5px/1 "IBM Plex Mono", monospace; color: var(--cap); }
+
+.side__nav { padding: 0 10px; display: flex; flex-direction: column; gap: 1px; }
+
+.side__group {
+  margin: 12px 0 4px;
+  padding: 0 9px;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--cap);
+}
+.side__group:first-child { margin-top: 0; }
+
+.side__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px 6px 9px;
+  border-left: 3px solid transparent;
+  border-radius: 0 4px 4px 0;
+  text-decoration: none;
+  color: var(--sub);
+  font-size: 13.5px;
+  line-height: 1.35;
+}
+.side__item:hover { background: #eef0f3; color: var(--ink); }
+
+/* 현재 위치는 색만으로 구분하지 않는다 — 표시선 + 굵기 + 배지를 함께 쓴다 */
+.side__item.is-here {
+  border-left-color: var(--accent);
+  background: var(--here-bg);
+  color: var(--ink);
+  font-weight: 600;
+}
+.side__item.is-here .side__num { color: var(--accent); }
+
+.side__num {
+  flex: 0 0 18px;
+  text-align: right;
+  font: 600 11px/1 "IBM Plex Mono", monospace;
+  color: var(--cap);
+}
+.side__t { min-width: 0; }
+.side__badge {
+  margin-left: auto;
+  flex: 0 0 auto;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--accent-deep);
+  background: var(--chip);
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+
+.side__empty { margin: 10px 9px; font-size: 12.5px; color: var(--cap); }
+
+/* ── 본문 ───────────────────────────────── */
+
+.main { flex: 1; min-width: 0; padding: 0 32px; }
+
+/* 페이지들이 각자 쓰는 폭 상한(46rem / 64rem)은 그대로 둔다 */
+
+/* 본문 폭이 셸만큼 줄었으므로, 표 안의 식별자가 중간에서 끊기지 않게 한다 —
+   claude-haiku-4-5 가 "claude-haiku-4-" / "5" 로 갈라지던 것.
+   표는 .tbl__scroll 로 가로 스크롤이 되므로 넘쳐도 잘리지 않는다. */
+.main table code,
+.main td code,
+.main th code { white-space: nowrap; }
+
+/* ── 우측 「이 페이지 안에서」 ─────────────── */
+
+.onpage {
+  flex: 0 0 var(--onpage-w);
+  width: var(--onpage-w);
+  position: sticky;
+  top: var(--top-h);
+  max-height: calc(100vh - var(--top-h));
+  overflow-y: auto;
+  padding: 28px 20px 24px 0;
+}
+.onpage__k {
+  margin: 0 0 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--cap);
+}
+.onpage__nav { display: flex; flex-direction: column; gap: 2px; border-left: 1px solid var(--line); }
+.onpage__nav a {
+  padding: 4px 0 4px 12px;
+  margin-left: -1px;
+  border-left: 2px solid transparent;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--cap);
+  text-decoration: none;
+}
+.onpage__nav a:hover { color: var(--ink); }
+.onpage__nav a.is-here { border-left-color: var(--accent); color: var(--accent); font-weight: 600; }
+.onpage:not(.has-items) { visibility: hidden; }
+
+/* ── 좁은 화면 ──────────────────────────── */
+
+@media (max-width: 1180px) {
+  .onpage { display: none; }
+}
+
+@media (max-width: 900px) {
+  .top { gap: 12px; padding: 0 14px; }
+  .top__drawer { display: flex; }
+  .top__search { display: none; }
+  .top__meta a { display: none; }
+  .main { padding: 0 16px; }
+
+  .side {
+    position: fixed;
+    top: var(--top-h);
+    left: 0;
+    z-index: 25;
+    height: calc(100vh - var(--top-h));
+    transform: translateX(-100%);
+    transition: transform .18s ease;
+    box-shadow: 0 0 0 100vmax rgba(17, 24, 39, 0);
+  }
+  .side.is-open { transform: none; box-shadow: 0 0 0 100vmax rgba(17, 24, 39, .35); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .side { transition: none; }
+}
+
+@media print {
+  .top, .side, .onpage, .skip { display: none !important; }
+  .main { padding: 0; }
+}

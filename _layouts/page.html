@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<article class="plain">
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+</article>
+
+<style>
+.plain { max-width: 46rem; margin: 2.5rem auto 4rem; }
+.plain h1 {
+  font-size: 1.9rem;
+  margin: 0 0 1.4rem;
+  letter-spacing: -.01em;
+  color: #111827;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #111827;
+}
+.plain p { color: #374151; line-height: 1.8; }
+.plain ul { color: #374151; line-height: 1.9; padding-left: 1.2rem; }
+.plain code {
+  font: .85em/1 "IBM Plex Mono", ui-monospace, monospace;
+  background: #f3f4f6;
+  padding: .1rem .3rem;
+  border-radius: 3px;
+}
+</style>

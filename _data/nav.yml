@@ -1,0 +1,81 @@
+# 좌측 문서 색인. 페이지를 추가하면 여기에 한 줄 넣는다 —
+# 레이아웃이 이 파일만 읽으므로 각 페이지를 고칠 필요는 없다.
+# url 은 각 페이지의 permalink 와 정확히 같아야 현재 위치 표시가 붙는다.
+
+- section: 문서
+  items:
+    - num: "00"
+      title: 표지
+      url: /
+    - num: "—"
+      title: 목차
+      url: /toc/
+
+- section: 본문
+  items:
+    - num: "01"
+      title: 사업 개요
+      url: /overview/
+    - num: "02"
+      title: 팀 구성 및 역할
+      url: /team/
+    - num: "03"
+      title: 요구사항 분석
+      url: /requirements/
+    - num: "04"
+      title: 시스템 설계
+      url: /design/
+    - num: "05"
+      title: 기술 스택 및 개발 환경
+      url: /stack/
+    - num: "06"
+      title: 주요 기능 개발
+      url: /features/
+    - num: "07"
+      title: AI 모델 적용
+      url: /ai-model/
+    - num: "08"
+      title: 테스트
+      url: /testing/
+    - num: "09"
+      title: 배포 및 운영
+      url: /deployment/
+    - num: "10"
+      title: 개발 일정 및 추진 체계
+      url: /schedule/
+    - num: "11"
+      title: 결론 및 향후 과제
+      url: /conclusion/
+    - num: "12"
+      title: 부록
+      url: /appendix/
+
+- section: 역할 상세
+  items:
+    - num: ""
+      title: 인프라 · 총괄 — 진수택
+      url: /role-infra/
+    - num: ""
+      title: 백엔드 — 이우정
+      url: /role-backend/
+    - num: ""
+      title: 프론트엔드 — 김민아
+      url: /role-frontend/
+    - num: ""
+      title: 에이전트 — 박소연
+      url: /role-agent/
+    - num: ""
+      title: 앱 (모바일) — 김민아
+      url: /role-app/
+
+- section: 부속
+  items:
+    - num: ""
+      title: 개발 로그
+      url: /log/
+    - num: ""
+      title: 미결 항목
+      url: /todo/
+    - num: ""
+      title: 이 사이트에 대하여
+      url: /about/
